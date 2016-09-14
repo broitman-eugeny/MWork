@@ -1,0 +1,1089 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0044)http://alex-black.ru/article.php?content=109 -->
+<html lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link href="http://localhost/alex-black.ru/feeds.xml" rel="alternate" type="application/rss+xml" title="описание вашего фида ">
+<link rel="shortcut icon" href="http://alex-black.ru/favicon.ico">
+
+<title> Кривые Безье.Применение
+ </title>
+
+
+
+<link rel="stylesheet" type="text/css" href="./Кривые Безье.Применение_files/default.css" title="default">
+
+<style type="text/css">
+.siteheader H1 {
+	CLEAR: left; PADDING-RIGHT: 0px; 
+        PADDING-LEFT: 12px;
+        FONT-WEIGHT: normal; 
+        FONT-SIZE: 200%; 
+        PADDING-BOTTOM: 0px; MARGIN: 0px; 
+        COLOR: #253183; PADDING-TOP: 0px; 
+        FONT-FAMILY: "Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif; 
+        BACKGROUND-COLOR: #ffffff; 
+        TEXT-ALIGN: left
+}
+
+.fsmallfont {
+        FONT: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif
+}
+
+.fieldset {
+	MARGIN-BOTTOM: 3px
+}
+.fieldset {
+	FONT-SIZE: 12px
+}
+.fieldset TD {
+	FONT-SIZE: 12px
+}
+.fieldset P {
+	FONT-SIZE: 11px
+}
+.fieldset LI {
+	FONT-SIZE: 11px
+}
+.textads {
+	FONT-SIZE: 80%
+}
+
+.commentfont {
+	FONT: 14px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif
+}
+
+.tborder {
+	BORDER-RIGHT: #87CEEB 1px solid; 
+        BORDER-TOP: #87CEEB 1px solid; 
+        BACKGROUND: #87CEEB; 
+        BORDER-LEFT: #87CEEB 1px solid; 
+        COLOR: #000000; 
+        FONT-FAMILY: "Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif; 
+        BORDER-BOTTOM: #87CEEB 1px solid
+}
+
+</style>
+   <script src="./Кривые Безье.Применение_files/blocks.js" type="text/javascript"></script>
+   <style type="text/css">
+    .Canvas {float:left; width:100%; height:500pt;}
+    .Item { POSITION: absolute;  text-align:center; }
+    .ItemBorder { border:solid; border-width:1; }
+   </style>
+
+</head>
+
+<body>
+
+<div class="siteheader"><h1>Programming: theory and practice by alexBlack</h1></div>
+<br><table cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td>
+<div class="divinner" style="">
+<div class="content">
+<table class="hide" width="100%" border="0" cellspacing="0" cellpadding="4"><tbody>
+<tr><td align="center" valign="top" style="BACKGROUND-COLOR: #87CEEB"><a href="http://alex-black.ru/index.php">Главная</a>
+</td><td align="center" valign="top" style="BACKGROUND-COLOR: #87CEEB"><a href="http://alex-black.ru/article.php?content=12">Эксперименты</a>
+</td><td align="center" valign="top" style="BACKGROUND-COLOR: #87CEEB"><a href="http://alex-black.ru/article.php?content=13">Утилиты</a>
+</td><td align="center" valign="top" style="BACKGROUND-COLOR: #87CEEB"><a href="http://alex-black.ru/article.php?content=14">Компоненты</a>
+</td><td align="center" valign="top" style="BACKGROUND-COLOR: #87CEEB"><a href="http://alex-black.ru/article.php?content=16">Что почитать</a>
+</td><td align="center" valign="top" style="BACKGROUND-COLOR: #87CEEB"><a href="http://alex-black.ru/article.php?content=15">Контакты</a>
+</td></tr></tbody></table></div></div></td></tr></tbody></table><table width="100%"><tbody><tr><td width="210px" valign="top">
+
+<table cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td>
+<div class="divinner" style="">
+<div class="content">
+<table class="hide" width="100%" border="0" cellspacing="0" cellpadding="2"><tbody>
+<tr><td valign="top" colspan="2" style="BACKGROUND-COLOR: #87CEEB"><small><a href="http://alex-black.ru/index.php">Главная</a></small>
+</td></tr><tr><td valign="top" colspan="2" style="BACKGROUND-COLOR: #87CEEB"><small><a href="http://alex-black.ru/article.php?content=12">Эксперименты</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top"><small><a href="http://alex-black.ru/article.php?content=108">Быстрое умножение матриц</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top"><small><span class="NPF">Кривые Безье.Применение</span></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top"><small><a href="http://alex-black.ru/article.php?content=110">Шрифты.Чтение/запись отдельных символов</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top"><small><a href="http://alex-black.ru/article.php?content=113">Кубик Рубика</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top"><small><a href="http://alex-black.ru/article.php?content=114">Точки пересечения кривых Безье</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top"><small> <a href="http://alex-black.ru/article.php?content=115">topswops</a> </small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top"><small><a href="http://alex-black.ru/article.php?content=117">Алгоритм Бухбергера</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top"><small><a href="http://alex-black.ru/article.php?content=118">Оверлеи многоугольников</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top" style="BACKGROUND-COLOR: #FFFFB7"><small> Delphi</small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top"><small><a href="http://alex-black.ru/article.php?content=100">Вызов методов по имени 1</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top"><small><a href="http://alex-black.ru/article.php?content=102">Вызов методов по имени 2</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top" style="BACKGROUND-COLOR: #FFFFB7"><small> C#</small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top"><small><a href="http://alex-black.ru/article.php?content=105">Динамическая реализация интерфейсов</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top" style="BACKGROUND-COLOR: #FFFFB7"><small><a href="http://alex-black.ru/article.php?content=119">Латинские и магические квадраты</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top" style="BACKGROUND-COLOR: #FFFFB7"><small><a href="http://alex-black.ru/article.php?content=140">Несамопересекающиеся маршруты коня</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top" style="BACKGROUND-COLOR: #FFFFB7"><small><a href="http://alex-black.ru/article.php?content=160">Меандры на сетке</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top" style="BACKGROUND-COLOR: #FFFFB7"><small><a href="http://alex-black.ru/article.php?content=170">Задача о посадке деревьев</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top" style="BACKGROUND-COLOR: #FFFFB7"><small><a href="http://alex-black.ru/article.php?content=190">Пути ладьи</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top"><small><a href="http://alex-black.ru/article.php?content=200">Monochromatic Squares</a></small>
+</td></tr><tr><td valign="top" colspan="2" style="BACKGROUND-COLOR: #87CEEB"><small><a href="http://alex-black.ru/article.php?content=13">Утилиты</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top"><small> <a href="http://alex-black.ru/article.php?content=101">txt2html converter</a> </small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top"><small><a href="http://alex-black.ru/article.php?content=107">Номер телефона словами</a> </small>
+</td></tr><tr><td valign="top" colspan="2" style="BACKGROUND-COLOR: #87CEEB"><small><a href="http://alex-black.ru/article.php?content=14">Компоненты</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top" style="BACKGROUND-COLOR: #FFFFB7"><small> <a href="http://alex-black.ru/article.php?content=103">alTex.dll</a> </small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top"><small><a href="http://alex-black.ru/article.php?content=104">Вычисление выражений</a></small>
+</td></tr><tr><td valign="top"><pre class="mono"></pre></td><td valign="top"><small> <a href="http://alex-black.ru/article.php?content=111">Тестирование кода в Delphi</a></small>
+</td></tr><tr><td valign="top" colspan="2" style="BACKGROUND-COLOR: #87CEEB"><small><a href="http://alex-black.ru/article.php?content=16">Что почитать</a></small>
+</td></tr><tr><td valign="top" colspan="2" style="BACKGROUND-COLOR: #87CEEB"><small><a href="http://alex-black.ru/article.php?content=15">Контакты</a></small>
+</td></tr></tbody></table></div></div></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td>
+<div class="divinner" style="">
+<div class="content">
+<table class="hide" width="100%" border="0" cellspacing="0" cellpadding="2"><tbody>
+<tr><td valign="top" colspan="2">
+<p><br></p>
+<div class="line"></div>
+<p></p></td></tr><tr><td valign="top" colspan="2"><a href="http://programmersforum.ru/" target="_blank">
+    <img src="./Кривые Безье.Применение_files/programmersforum.jpg" alt="Форум программистов" title="Форум программистов" border="1">
+</a></td></tr><tr><td valign="top"><a href="http://zealint.ru/" target="_blank">
+    <img src="./Кривые Безье.Применение_files/zealint.jpg" width="88" alt="Конкурсы, статьи по математике" title="Конкурсы, статьи по математике" border="1">
+</a></td><td align="right" valign="top"></td></tr><tr><td valign="top"><a href="http://www.diary.ru/~Organon/?calendar&year=2008" target="_blank">
+    <img src="./Кривые Безье.Применение_files/popmath.jpg" alt="Популярная математика для взрослых" width="88" title="Интересные статьи по математике" border="1">
+</a></td><td align="right" valign="top"><a href="http://fic.bos.ru/" target="_blank">
+    <img src="./Кривые Безье.Применение_files/banner_88x32.png" width="88" alt="Fractal Image Compression" title="Fractal Image Compression: Community, Articles, Solutions"></a>
+</td></tr></tbody></table></div></div></td></tr></tbody></table></td><td valign="top">
+
+<table cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td>
+<div class="divinner" style="">
+<div class="content">
+<table class="hide" width="100%" border="0" cellspacing="0" cellpadding="4"><tbody>
+<tr><td valign="top" style="BACKGROUND-COLOR: #FFFFB7"><pre class="mono"><span class="NP">Кривые Безье.Применение</span>
+</pre></td></tr></tbody></table></div></div></td></tr></tbody></table>
+<p></p>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td>
+<div class="divinner divFrame" style="BACKGROUND-COLOR:#f9f9f9; BORDER: #dcdcdc 1px solid; " id="DivFrame0">
+<div class="divhead divTgl">Содержание<a class="NavToggle" id="NavToggle0" href="javascript:collapseDiv(0);">[hide]</a></div>
+<div class="content" style="PADDING-LEFT: 0.3em; PADDING-RIGHT: 0.3em; ">
+<ul class="toc">
+   <li class="toc"><a href="http://alex-black.ru/article.php?content=109#head_0">1 Базовые сведения</a></li>
+   <li class="toc"><a href="http://alex-black.ru/article.php?content=109#head_1">2 Вычисление точек кривой Безье</a></li>
+   <li class="toc"><a href="http://alex-black.ru/article.php?content=109#head_2">3 Вычисление опорных точек.</a></li>
+   <li class="toc"><a href="http://alex-black.ru/article.php?content=109#head_3">4 Аппроксимация дуги эллипса кривыми Безье</a></li>
+   <li class="toc"><a href="http://alex-black.ru/article.php?content=109#head_4">5 Аппроксимация синусоиды кривыми Безье</a></li>
+   <li class="toc"><a href="http://alex-black.ru/article.php?content=109#head_5">6 Аппроксимация параболы кривыми Безье</a></li>
+   <li class="toc"><a href="http://alex-black.ru/article.php?content=109#head_6">7 Соединение точек плавной кривой в GDI+</a></li>
+   <li class="toc"><a href="http://alex-black.ru/article.php?content=109#head_7">8 Кубические сплайны Эрмита</a></li>
+   <li class="toc"><a href="http://alex-black.ru/article.php?content=109#head_8">9 Сплайны Катмулла-Рома</a></li>
+   <li class="toc"><a href="http://alex-black.ru/article.php?content=109#head_9">10 Сплайны Кочанека-Бартельса</a></li>
+   <li class="toc"><a href="http://alex-black.ru/article.php?content=109#head_10">11 Литература</a></li></ul></div></div></td></tr></tbody></table>
+<p></p>
+<h2><span class="headline" id="head_0">Базовые сведения</span></h2>
+Как GDI, так и GDI+ предоставляют функции для рисования 
+<a href="http://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D0%B2%D0%B0%D1%8F_%D0%91%D0%B5%D0%B7%D1%8C%D0%B5" target="_blank">кривых Безье</a>.
+При этом используются кубические кривые, для построения которых 
+нужны четыре опорные точки. Простой пример для GDI+ построения 
+кривой и ее опорных точек:
+
+<br><br>
+<div class="textleft" style="BACKGROUND-COLOR:#F5F5F5; width:60%; BORDER: #dcdcdc 1px solid; ">
+<div class="headsmall" style="BACKGROUND-COLOR: #696969; COLOR:#FFFFFF">pascal</div>
+<div class="content" style="font-size:90%; PADDING-LEFT: 0.3em; PADDING-RIGHT: 0.3em; ">
+<pre class="text"><span class="RW">var</span> g : TGPGraphics;
+    pen : TGPPen;
+    brush : TGPBrush;
+    P : <span class="RW">array</span> [<span class="NC">1.</span>.<span class="NC">4</span>] <span class="RW">of</span> TGPPointF;
+    i : integer;
+<span class="RW">begin</span>
+   g := TGPGraphics.Create(image<span class="NC">1.</span>Canvas.Handle);
+   pen := TGPPen.Create(aclBlack, <span class="NC">2</span>);
+   brush := TGPSolidBrush.Create(aclGreen);
+   <span class="RW">try</span>
+      g.SetSmoothingMode(SmoothingModeAntiAlias);
+
+      P[<span class="NC">1</span>] := makePoint(  <span class="NC">10.0</span>, <span class="NC">100</span>);
+      P[<span class="NC">2</span>] := makePoint(  <span class="NC">60.0</span>,  <span class="NC">20</span>);
+      P[<span class="NC">3</span>] := makePoint( <span class="NC">110.0</span>, <span class="NC">180</span>);
+      P[<span class="NC">4</span>] := makePoint( <span class="NC">160.0</span>, <span class="NC">100</span>);
+
+      g.DrawBezier(pen, P[<span class="NC">1</span>], P[<span class="NC">2</span>], P[<span class="NC">3</span>], P[<span class="NC">4</span>]);
+
+      pen.SetWidth(<span class="NC">1</span>);
+      pen.SetColor(aclBlue);
+      g.DrawLine(pen, P[<span class="NC">1</span>], P[<span class="NC">2</span>]);
+      g.DrawLine(pen, P[<span class="NC">3</span>], P[<span class="NC">4</span>]);
+
+      <span class="RW">for</span> i := <span class="NC">1</span> <span class="RW">to</span> <span class="NC">4</span> <span class="RW">do</span>
+         g.FillEllipse(brush, P[i].x-<span class="NC">3</span>, P[i].y-<span class="NC">3</span>, <span class="NC">6</span>, <span class="NC">6</span>);
+   <span class="RW">finally</span>
+      brush.free;
+      pen.free;
+      g.free;
+   <span class="RW">end</span>;
+</pre></div></div>
+<p></p>
+<img src="./Кривые Безье.Применение_files/b1.png">
+<br clear="both">
+
+<br>
+<h2><span class="headline" id="head_1">Вычисление точек кривой Безье</span></h2>
+Кривая Безье описывается простым параметрическим уравнением:
+
+<br>
+<br><pre class="mono"> <img src="./Кривые Безье.Применение_files/p5.png" align="middle" alt="$$ b(t) = (1-t)^3p_0 + 3t(1-t)^2p_1 + 3t^2(1-t)p_2+t^3p_3, \quad t \in [0 \dotsc 1] $$">
+
+</pre>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td>
+<div class="divinner" style="BACKGROUND-COLOR:#98FB98; BORDER: #dcdcdc 1px solid; ">
+<div class="headsmall" style="BACKGROUND-COLOR: #008000; COLOR:#FFFFFF">comment</div>
+<div class="content" style="font-size:90%; PADDING-LEFT: 0.3em; PADDING-RIGHT: 0.3em; ">
+Вообще, семейство кривых описывается следующим рядом формул:
+
+<br>
+<br><pre class="mono"> <img src="./Кривые Безье.Применение_files/p6.png" align="middle" alt="$$ b(t) = 1(s^1 t^0)P_0 + 1(s^0 t^1)P_1 $$"> Линейные
+ <img src="./Кривые Безье.Применение_files/p7.png" align="middle" alt="$$ b(t) = 1(s^2 t^0)P_0 + 2(s^1 t^1)P_1 + 1(s^0 t^2)P_2 $$"> Квадратичные
+ <img src="./Кривые Безье.Применение_files/p8.png" align="middle" alt="$$ b(t) = 1(s^3 t^0)P_0 + 3(s^2 t^1)P_1 + 3(s^1 t^2)P_2 + 1(s^0 t^3)P_3 $$"> Кубические
+ … (и т.д.)
+
+</pre>
+Здесь <img src="./Кривые Безье.Применение_files/p9.png" align="middle" alt="$ P_i $"> - опорные точки, коэфициенты - 
+значения из треугольника Паскаля (или биномиальные 
+коэффициенты). <img src="./Кривые Безье.Применение_files/p10.png" align="middle" alt="$ s $"> и <img src="./Кривые Безье.Применение_files/p11.png" align="middle" alt="$ t $"> - параметры кривых. 
+Если принять <img src="./Кривые Безье.Применение_files/p12.png" align="middle" alt="$ s = 1-t $"> мы получаем знакомую нам формулу. 
+
+<br>
+<br>Собственно нас интересуют кубические кривые (кстати, квадратичные легко 
+преобразуются к кубическим и наоборот).
+<br></div></div></td></tr></tbody></table>
+<p></p>
+<table cellspacing="0" cellpadding="0" width="60%"><tbody><tr><td>
+<div class="divinner" style="BACKGROUND-COLOR:#F5F5F5; BORDER: #dcdcdc 1px solid; ">
+<div class="headsmall" style="BACKGROUND-COLOR: #696969; COLOR:#FFFFFF">pascal</div>
+<div class="content" style="font-size:90%; PADDING-LEFT: 0.3em; PADDING-RIGHT: 0.3em; ">
+<pre class="text"><span class="RW">function</span> BCoord(x<span class="NC">0</span>, x<span class="NC">1</span>, x<span class="NC">2</span>, x<span class="NC">3</span>, t:Single):Single;
+<span class="RW">begin</span>
+   result := (<span class="NC">1</span>-t)*(<span class="NC">1</span>-t)*(<span class="NC">1</span>-t)*x<span class="NC">0</span>+
+             <span class="NC">3</span>*t*(<span class="NC">1</span>-t)*(<span class="NC">1</span>-t)*x<span class="NC">1</span>+
+             <span class="NC">3</span>*t*t*(<span class="NC">1</span>-t)*x<span class="NC">2</span>+
+             t*t*t*x<span class="NC">3</span>;
+<span class="RW">end</span>;
+</pre></div></div></td></tr></tbody></table>
+<p></p>
+Известно, что кривая Безье всегда лежит внутри выпуклого четырехугольника,
+заданного опорными точками. Однако, как правило, его размер больше, чем 
+размер прямоугольника, описанного вокруг кривой. Используя параметрическое 
+уравнение мы можем вычислить размер области, реально занятой кривой. 
+
+<br><br>
+<div class="textleft" style="BACKGROUND-COLOR:#F5F5F5; width:60%; BORDER: #dcdcdc 1px solid; ">
+<div class="headsmall" style="BACKGROUND-COLOR: #696969; COLOR:#FFFFFF">pascal</div>
+<div class="content" style="font-size:90%; PADDING-LEFT: 0.3em; PADDING-RIGHT: 0.3em; ">
+<pre class="text"><span class="RW">var</span> g : TGPGraphics;
+    pen : TGPPen;
+    brush : TGPBrush;
+    P : <span class="RW">array</span> [<span class="NC">1.</span>.<span class="NC">4</span>] <span class="RW">of</span> TGPPointF;
+    t, x, y : Single;
+    R<span class="NC">1</span>, R<span class="NC">2</span>:TGPPointF;
+<span class="RW">begin</span>
+   g := TGPGraphics.Create(image<span class="NC">1.</span>Canvas.Handle);
+   pen := TGPPen.Create(aclBlack, <span class="NC">2</span>);
+   brush := TGPSolidBrush.Create(aclGreen);
+   <span class="RW">try</span>
+      g.SetSmoothingMode(SmoothingModeAntiAlias);
+
+      P[<span class="NC">1</span>] := makePoint(  <span class="NC">10.0</span>, <span class="NC">100</span>);
+      P[<span class="NC">2</span>] := makePoint(  <span class="NC">60.0</span>,  <span class="NC">20</span>);
+      P[<span class="NC">3</span>] := makePoint( <span class="NC">110.0</span>, <span class="NC">180</span>);
+      P[<span class="NC">4</span>] := makePoint( <span class="NC">160.0</span>, <span class="NC">100</span>);
+
+      g.DrawBezier(pen, P[<span class="NC">1</span>], P[<span class="NC">2</span>], P[<span class="NC">3</span>], P[<span class="NC">4</span>]);
+
+      R<span class="NC">1</span> := P[<span class="NC">1</span>];
+      R<span class="NC">2</span> := P[<span class="NC">4</span>];
+      t := <span class="NC">0.125</span>;
+      <span class="RW">while</span> t &lt; <span class="NC">1.0</span> <span class="RW">do begin</span>
+         x := BCoord(P[<span class="NC">1</span>].x, P[<span class="NC">2</span>].x, P[<span class="NC">3</span>].x, P[<span class="NC">4</span>].x, t);
+         y := BCoord(P[<span class="NC">1</span>].y, P[<span class="NC">2</span>].y, P[<span class="NC">3</span>].y, P[<span class="NC">4</span>].y, t);
+         g.FillEllipse(brush, x-<span class="NC">3</span>, y-<span class="NC">3</span>, <span class="NC">6</span>, <span class="NC">6</span>);
+         <span class="RW">if</span> x &lt; R<span class="NC">1.</span>x <span class="RW">then</span> R<span class="NC">1.</span>x := x;
+         <span class="RW">if</span> y &lt; R<span class="NC">1.</span>y <span class="RW">then</span> R<span class="NC">1.</span>y := y;
+         <span class="RW">if</span> x &gt; R<span class="NC">2.</span>x <span class="RW">then</span> R<span class="NC">2.</span>x := x;
+         <span class="RW">if</span> y &gt; R<span class="NC">2.</span>y <span class="RW">then</span> R<span class="NC">2.</span>y := y;
+         t := t + <span class="NC">0.125</span>;
+      <span class="RW">end</span>;
+
+      pen.SetWidth(<span class="NC">1</span>);
+      pen.SetColor(aclBlue);
+      g.DrawRectangle(pen, 
+             R<span class="NC">1.</span>x-<span class="NC">2</span>,      R<span class="NC">1.</span>y-<span class="NC">2</span>, 
+             R<span class="NC">2.</span>x-R<span class="NC">1.</span>x+<span class="NC">4</span>, R<span class="NC">2.</span>Y-R<span class="NC">1.</span>Y+<span class="NC">4</span>);
+   <span class="CM">//...</span>
+</pre></div></div>
+<p></p>
+<img src="./Кривые Безье.Применение_files/b2.png">
+<br clear="both">
+
+<br>
+<h2><span class="headline" id="head_2">Вычисление опорных точек.</span></h2>
+Пусть изместно, что кривая выходит из точки A, проходит через точку B 
+при t = <span class="NC">1</span>/<span class="NC">3</span>, через точку C при t = <span class="NC">2</span>/<span class="NC">3</span> и заканчивается в точке D. 
+Подставив эти значения в параметрическое уравнение кривой Безье 
+получим выражения для вычисления координат опорных точек:
+
+<br>
+<br><pre class="mono"> <img src="./Кривые Безье.Применение_files/p13.png" align="middle" alt="$$ p_1 = (-5A+18B-9C+2D)/6; $$">
+ <img src="./Кривые Безье.Применение_files/p14.png" align="middle" alt="$$ p_2 = (2A-9B+18C-5D)/6; $$">
+
+</pre>
+Оформим эти вычисления отдельной процедурой. Она принимает четыре точки, 
+через которые должна пройти кривая. В этих же переменных возвращаются 
+начальная, конечная и две опорные точки кривой.
+
+<br><br>
+<table cellspacing="0" cellpadding="0" width="60%"><tbody><tr><td>
+<div class="divinner" style="BACKGROUND-COLOR:#F5F5F5; BORDER: #dcdcdc 1px solid; ">
+<div class="headsmall" style="BACKGROUND-COLOR: #696969; COLOR:#FFFFFF">pascal</div>
+<div class="content" style="font-size:90%; PADDING-LEFT: 0.3em; PADDING-RIGHT: 0.3em; ">
+<pre class="text"><span class="RW">procedure</span> ToBezier(<span class="RW">var</span> A, B, C, D:TGPoint);
+
+ <span class="RW">function</span> Point<span class="NC">1</span>(x<span class="NC">1</span>, x<span class="NC">2</span>, x<span class="NC">3</span>, x<span class="NC">4</span>:Single):Single;
+ <span class="RW">begin</span>
+    result := (-<span class="NC">5</span>*x<span class="NC">1</span>+<span class="NC">18</span>*x<span class="NC">2</span>-<span class="NC">9</span>*x<span class="NC">3</span>+<span class="NC">2</span>*x<span class="NC">4</span>)/<span class="NC">6</span>;
+ <span class="RW">end</span>;
+
+ <span class="RW">function</span> Point<span class="NC">2</span>(x<span class="NC">1</span>, x<span class="NC">2</span>, x<span class="NC">3</span>, x<span class="NC">4</span>:Single):Single;
+ <span class="RW">begin</span>
+    result := (<span class="NC">2</span>*x<span class="NC">1</span>-<span class="NC">9</span>*x<span class="NC">2</span>+<span class="NC">18</span>*x<span class="NC">3</span>-<span class="NC">5</span>*x<span class="NC">4</span>)/<span class="NC">6</span>;
+ <span class="RW">end</span>;
+
+<span class="RW">var</span> B<span class="NC">0</span>, C<span class="NC">0</span> : TGPoint;
+<span class="RW">begin</span>
+   B<span class="NC">0.</span>x := Point<span class="NC">1</span>(A.x, B.x, C.x, D.x);
+   B<span class="NC">0.</span>y := Point<span class="NC">1</span>(A.y, B.y, C.y, D.y);
+   C<span class="NC">0.</span>x := Point<span class="NC">2</span>(A.x, B.x, C.x, D.x);
+   C<span class="NC">0.</span>y := Point<span class="NC">2</span>(A.y, B.y, C.y, D.y);
+   B := B<span class="NC">0</span>;
+   C := C<span class="NC">0</span>;
+<span class="RW">end</span>;
+</pre></div></div></td></tr></tbody></table>
+<p></p>
+Посмотрим как это работает:
+
+<br><br>
+<div class="textleft" style="BACKGROUND-COLOR:#F5F5F5; width:60%; BORDER: #dcdcdc 1px solid; ">
+<div class="headsmall" style="BACKGROUND-COLOR: #696969; COLOR:#FFFFFF">pascal</div>
+<div class="content" style="font-size:90%; PADDING-LEFT: 0.3em; PADDING-RIGHT: 0.3em; ">
+<pre class="text"><span class="RW">var</span> g : TGPGraphics;
+    pen : TGPPen;
+    brush : TGPSolidBrush;
+    P : <span class="RW">array</span> [<span class="NC">1.</span>.<span class="NC">4</span>] <span class="RW">of</span> TGPPointF;
+    i : integer;
+<span class="RW">begin</span>
+   g := TGPGraphics.Create(image<span class="NC">1.</span>Canvas.Handle);
+   pen := TGPPen.Create(aclBlack, <span class="NC">2</span>);
+   brush := TGPSolidBrush.Create(aclGreen);
+   <span class="RW">try</span>
+      g.SetSmoothingMode(SmoothingModeAntiAlias);
+
+      P[<span class="NC">1</span>] := makePoint(  <span class="NC">10.0</span>, <span class="NC">100</span>);
+      P[<span class="NC">2</span>] := makePoint( <span class="NC">100.0</span>, <span class="NC">150</span>);
+      P[<span class="NC">3</span>] := makePoint( <span class="NC">180.0</span>, <span class="NC">120</span>);
+      P[<span class="NC">4</span>] := makePoint( <span class="NC">190.0</span>,  <span class="NC">20</span>);
+
+      <span class="RW">for</span> i := <span class="NC">1</span> <span class="RW">to</span> <span class="NC">4</span> <span class="RW">do</span>
+         g.FillEllipse(brush, P[i].x-<span class="NC">3</span>, P[i].y-<span class="NC">3</span>, <span class="NC">6</span>, <span class="NC">6</span>);
+
+      ToBezier(P[<span class="NC">1</span>], P[<span class="NC">2</span>], P[<span class="NC">3</span>], P[<span class="NC">4</span>]);
+      g.DrawBezier(pen, P[<span class="NC">1</span>], P[<span class="NC">2</span>], P[<span class="NC">3</span>], P[<span class="NC">4</span>]);
+
+      brush.SetColor(aclRed);
+      <span class="RW">for</span> i := <span class="NC">2</span> <span class="RW">to</span> <span class="NC">3</span> <span class="RW">do</span>
+         g.FillEllipse(brush, P[i].x-<span class="NC">3</span>, P[i].y-<span class="NC">3</span>, <span class="NC">6</span>, <span class="NC">6</span>);
+
+      pen.SetWidth(<span class="NC">1</span>);
+      pen.SetColor(aclBlue);
+      <span class="RW">for</span> i := <span class="NC">1</span> <span class="RW">to</span> <span class="NC">3</span> <span class="RW">do</span>
+         g.DrawLine(pen, P[i], P[i+<span class="NC">1</span>]);
+</pre></div></div>
+<p></p>
+<img src="./Кривые Безье.Применение_files/b3.png">
+<br clear="both">
+
+<br>
+<h2><span class="headline" id="head_3">Аппроксимация дуги эллипса кривыми Безье</span></h2>
+Пусть задан эллипс с центром в точке (<span class="NC">0</span>, <span class="NC">0</span>) и радиусами a, b (по оси X 
+и по оси Y соответственно). Требуется построить дугу между заданными углами. 
+
+<br>
+<br>Прежде всего нужно найти точки начала и конца дуги - они же будут начальной 
+и конечной точками кривой. Для заданного угла <img src="./Кривые Безье.Применение_files/p15.png" align="middle" alt="$ \alpha $"> точку на эллипсе 
+можно найти подставив уравнение прямой <img src="./Кривые Безье.Применение_files/p16.png" align="middle" alt="$ y = \tan(\alpha) x $"> в 
+уравнение эллипса. После несложных преобразований получаем:
+
+<br>
+<br><pre class="mono"> <img src="./Кривые Безье.Применение_files/p17.png" align="middle" alt="$$ x{}^2 = (a{}^2 b{}^2) / (a{}^2 \tan(\alpha){}^2 + b{}^2) $$">
+
+</pre>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td>
+<div class="divinner" style="BACKGROUND-COLOR:#F5F5F5; BORDER: #dcdcdc 1px solid; ">
+<div class="headsmall" style="BACKGROUND-COLOR: #696969; COLOR:#FFFFFF">pascal</div>
+<div class="content" style="font-size:90%; PADDING-LEFT: 0.3em; PADDING-RIGHT: 0.3em; ">
+<pre class="text"><span class="RW">function</span> GetArcPoint(f, a, b:Single):TGPoint;
+<span class="RW">var</span> n:integer;
+    t, x, y, t<span class="NC">2</span>, a<span class="NC">2</span>, b<span class="NC">2</span>:Single;
+<span class="RW">begin</span>
+   n := GetQuadransRad(f);
+
+   <span class="RW">if</span> abs(f-pi/<span class="NC">2</span>) &lt; <span class="NC">0.001</span> <span class="RW">then begin</span>
+      x := <span class="NC">0</span>; y := b;
+   <span class="RW">end else begin</span>
+      t := tan(f);
+      t<span class="NC">2</span> := t*t;
+      b<span class="NC">2</span> := b*b;
+      a<span class="NC">2</span> := a*a;
+      x := sqrt((a<span class="NC">2</span>*b<span class="NC">2</span>) / (a<span class="NC">2</span>*t<span class="NC">2</span>+b<span class="NC">2</span>));
+      y := x*t;
+   <span class="RW">end</span>;
+   <span class="RW">case</span> n <span class="RW">of</span>
+      <span class="NC">1</span> : <span class="RW">begin</span> x := +x; y := +y; <span class="RW">end</span>;
+      <span class="NC">2</span> : <span class="RW">begin</span> x := -x; y := +y; <span class="RW">end</span>;
+      <span class="NC">3</span> : <span class="RW">begin</span> x := -x; y := -y; <span class="RW">end</span>;
+      <span class="NC">4</span> : <span class="RW">begin</span> x := +x; y := -y; <span class="RW">end</span>;
+   <span class="RW">end</span>;
+   result.x := x;
+   result.y := y;
+<span class="RW">end</span>;
+</pre></div></div></td></tr></tbody></table>
+<p></p>
+Здесь вызов GetQuadransRad определяет в каком квадранте находятся точки,
+лежащие на луче, проведенном от центар координат под углом f. Кроме того, 
+она корректирует угол так, чтобы он лежал в первом квадранте (так 
+удобнее проводить вычисления).
+
+<br><br>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td>
+<div class="divinner" style="BACKGROUND-COLOR:#F5F5F5; BORDER: #dcdcdc 1px solid; ">
+<div class="headsmall" style="BACKGROUND-COLOR: #696969; COLOR:#FFFFFF">pascal</div>
+<div class="content" style="font-size:90%; PADDING-LEFT: 0.3em; PADDING-RIGHT: 0.3em; ">
+<pre class="text"><span class="RW">function</span> GetQuadransRad(<span class="RW">var</span> a:Single):integer;
+<span class="RW">var</span> n:integer;
+<span class="RW">begin</span>
+   <span class="RW">if</span> a &gt; pi  <span class="RW">then</span> a := a - <span class="NC">2</span>*pi;
+   <span class="RW">if</span> a &lt; -pi <span class="RW">then</span> a := a + <span class="NC">2</span>*pi;
+
+   n := <span class="NC">0</span>;
+   <span class="RW">if</span> a &gt; <span class="NC">0</span> <span class="RW">then begin</span>
+      <span class="RW">if</span> (a &gt;=  <span class="NC">0</span>) and (a &lt;= pi/<span class="NC">2</span>)
+      <span class="RW">then</span> n := <span class="NC">1</span>
+      <span class="RW">else</span>
+      <span class="RW">if</span> (a &gt;  pi/<span class="NC">2</span>) and (a &lt;= pi) <span class="RW">then begin</span>
+         n := <span class="NC">2</span>; a := pi-a;
+      <span class="RW">end</span>
+   <span class="RW">end else begin</span>
+      <span class="RW">if</span> (a &lt;=   <span class="NC">0</span>) and (a &gt;= -pi/<span class="NC">2</span>) <span class="RW">then begin</span>
+         n := <span class="NC">4</span>; a := -a;
+      <span class="RW">end else</span>
+      <span class="RW">if</span> (a &lt;  -pi/<span class="NC">2</span>) and (a &gt;= -pi  ) <span class="RW">then begin</span>
+         n := <span class="NC">3</span>; a := pi+a;
+      <span class="RW">end</span>
+   <span class="RW">end</span>;
+   result := n;
+<span class="RW">end</span>;
+</pre></div></div></td></tr></tbody></table>
+<p></p>
+Теперь мы можем вычислить две крайние точки дуги. После этого можно 
+определить еще две точки дуги и по получившимся четырем точкам 
+построить кривую Безье, вызвав уже реализованную ранее процедуру 
+ToBezier.
+
+<br><br>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td>
+<div class="divinner" style="BACKGROUND-COLOR:#F5F5F5; BORDER: #dcdcdc 1px solid; ">
+<div class="headsmall" style="BACKGROUND-COLOR: #696969; COLOR:#FFFFFF">pascal</div>
+<div class="content" style="font-size:90%; PADDING-LEFT: 0.3em; PADDING-RIGHT: 0.3em; ">
+<pre class="text"><span class="RW">procedure</span> GetArcBezier(rx, ry, start, sweep:Single;
+                  <span class="RW">var</span> A, B, C, D:TGPoint); 
+<span class="RW">var</span> f : Single;
+    t<span class="NC">1</span>, t<span class="NC">2</span>, t<span class="NC">3</span>, t<span class="NC">4</span> :Single;
+<span class="RW">begin</span>
+   f := start*pi/<span class="NC">180</span>;
+   A := GetArcPoint(f, rx, ry);
+
+   f := (start+sweep)*pi/<span class="NC">180</span>;
+   D := GetArcPoint(f, rx, ry);
+
+   t<span class="NC">1</span> := arccos(A.x/rx); <span class="RW">if</span> A.y &lt; <span class="NC">0</span> <span class="RW">then</span> t<span class="NC">1</span> := -t<span class="NC">1</span>;
+   t<span class="NC">4</span> := arccos(D.x/rx); <span class="RW">if</span> D.y &lt; <span class="NC">0</span> <span class="RW">then</span> t<span class="NC">4</span> := -t<span class="NC">4</span>;
+   <span class="RW">if</span> sweep &gt; <span class="NC">0</span> <span class="RW">then begin</span>
+      <span class="RW">if</span> t<span class="NC">4</span> &lt; t<span class="NC">1</span> <span class="RW">then</span> t<span class="NC">4</span> := t<span class="NC">4</span>+<span class="NC">2</span>*pi;
+   <span class="RW">end else begin</span>
+      <span class="RW">if</span> t<span class="NC">4</span> &gt; t<span class="NC">1</span> <span class="RW">then</span> t<span class="NC">4</span> := t<span class="NC">4</span>-<span class="NC">2</span>*pi;
+   <span class="RW">end</span>;
+
+   t<span class="NC">2</span> := (t<span class="NC">4</span>-t<span class="NC">1</span>)/<span class="NC">3</span> + t<span class="NC">1</span>;
+   t<span class="NC">3</span> := (t<span class="NC">4</span>-t<span class="NC">1</span>)/<span class="NC">3</span>*<span class="NC">2</span> + t<span class="NC">1</span>;
+   B.x := rx*cos(t<span class="NC">2</span>);
+   B.y := ry*sin(t<span class="NC">2</span>);
+   C.x := rx*cos(t<span class="NC">3</span>);
+   C.y := ry*sin(t<span class="NC">3</span>);
+   ToBezier(A, B, C, D);
+<span class="RW">end</span>;
+</pre></div></div></td></tr></tbody></table>
+<p></p>
+Посмотрим, что у нас получилось. 
+
+<br><br>
+<div class="textleft divFrame collapsed" style="BACKGROUND-COLOR:#F5F5F5; width:60%; BORDER: #dcdcdc 1px solid; " id="DivFrame1">
+<div class="headsmall divTgl" style="BACKGROUND-COLOR: #696969; COLOR:#FFFFFF">pascal<a class="NavToggle" id="NavToggle1" href="javascript:collapseDiv(1);">[show]</a></div>
+<div class="content" style="font-size: 90%; padding-left: 0.3em; padding-right: 0.3em; display: none;">
+<pre class="text"><span class="RW">var</span> g : TGPGraphics;
+    pen : TGPPen;
+    brush : TGPSolidBrush;
+    Dt : TGPPointF;
+    RX, RY : Single;
+    A, B, C, D:TGPoint;
+<span class="RW">begin</span>
+   g := TGPGraphics.Create(image<span class="NC">1.</span>Canvas.Handle);
+   pen := TGPPen.Create(aclBlack, <span class="NC">2</span>);
+   brush := TGPSolidBrush.Create(aclGreen);
+   <span class="RW">try</span>
+      g.SetSmoothingMode(SmoothingModeAntiAlias);
+
+      RX := <span class="NC">180</span>;
+      RY := <span class="NC">80</span>;
+      Dt := makePoint(<span class="NC">190.0</span>, <span class="NC">90</span>);
+
+      <span class="CM">// Исходный эллипс для сравнения</span>
+      pen.SetWidth(<span class="NC">2</span>);
+      pen.SetColor(aclRed);
+      g.DrawEllipse(pen, <span class="NC">10</span>, <span class="NC">10</span>, RX*<span class="NC">2</span>, RY*<span class="NC">2</span>);
+
+      pen.SetWidth(<span class="NC">3</span>);
+      pen.SetColor(aclBlack);
+      GetArcBezier(rx, ry, <span class="NC">30</span>, <span class="NC">60</span>, A, B, C, D);
+      g.DrawBezier(pen,
+             A.x+Dt.x, A.y+Dt.y,
+             B.x+Dt.x, B.y+Dt.y,
+             C.x+Dt.x, C.y+Dt.y,
+             D.x+Dt.x, D.y+Dt.y
+             );
+
+      pen.SetWidth(<span class="NC">3</span>);
+      pen.SetColor(aclBlue);
+      GetArcBezier(rx, ry, <span class="NC">-30</span>, <span class="NC">-200</span>, A, B, C, D);
+      g.DrawBezier(pen,
+             A.x+Dt.x, A.y+Dt.y,
+             B.x+Dt.x, B.y+Dt.y,
+             C.x+Dt.x, C.y+Dt.y,
+             D.x+Dt.x, D.y+Dt.y
+             );
+</pre></div></div>
+<p></p>
+<img src="./Кривые Безье.Применение_files/b4.png">
+
+<br>
+<br>Здесь красный эллипс нарисован средствами GDI+ для сравнения. Видно, что 
+аппроксимация маленьких дуг (черным) совпадает с эталоном. Большие дуги 
+сильно отклоняются от эталонной кривой. 
+<br clear="both">
+
+<br>
+<br>Для точной аппроксимации разобъем дугу на две - три части и для каждой 
+построим свою кривую Безье:
+
+<br><br>
+<div class="textleft" style="BACKGROUND-COLOR:#F5F5F5; BORDER: #dcdcdc 1px solid; ">
+<div class="headsmall" style="BACKGROUND-COLOR: #696969; COLOR:#FFFFFF">pascal</div>
+<div class="content" style="font-size:90%; PADDING-LEFT: 0.3em; PADDING-RIGHT: 0.3em; ">
+<pre class="text"><span class="RW">function</span> GetArcBezier(rx, ry, start, sweep:Single; 
+    <span class="RW">var</span> Beziers : <span class="RW">array of</span> TGPoint):integer; overload;
+<span class="RW">var</span> f:Single;
+    i:integer;
+<span class="RW">begin</span>
+   result := <span class="NC">0</span>;
+   <span class="RW">if</span> abs(sweep) &gt; <span class="NC">360</span> <span class="RW">then</span> sweep := <span class="NC">360</span>;
+   <span class="RW">if</span> abs(sweep) &lt; <span class="NC">1</span> <span class="RW">then</span>  exit;
+
+   f := abs(sweep);
+   <span class="RW">if</span>      f &gt; <span class="NC">270</span> <span class="RW">then</span> result := <span class="NC">4</span>
+   <span class="RW">else if</span> f &gt; <span class="NC">180</span> <span class="RW">then</span> result := <span class="NC">3</span>
+   <span class="RW">else if</span> f &gt;  <span class="NC">90</span> <span class="RW">then</span> result := <span class="NC">2</span>
+   <span class="RW">else</span>                 result := <span class="NC">1</span>;
+
+   f := sweep / result;
+   <span class="RW">for</span> i := <span class="NC">0</span> <span class="RW">to</span> result - <span class="NC">1</span> <span class="RW">do begin</span>
+      GetArcBezier(rx, ry, start+f*i, f,
+          Beziers[i*<span class="NC">4</span>],
+          Beziers[i*<span class="NC">4</span>+<span class="NC">1</span>],
+          Beziers[i*<span class="NC">4</span>+<span class="NC">2</span>],
+          Beziers[i*<span class="NC">4</span>+<span class="NC">3</span>]);
+   <span class="RW">end</span>;
+<span class="RW">end</span>;
+</pre></div></div>
+<p></p>
+Теперь мы получаем полное совпадение. (пример использования в 
+приложении).
+
+<br>
+<br><img src="./Кривые Безье.Применение_files/b5.png">
+<br clear="both">
+
+<br>
+<h2><span class="headline" id="head_4">Аппроксимация синусоиды кривыми Безье</span></h2>
+Ограничимся интервалом от <span class="NC">0</span> до pi/<span class="NC">2.</span> Будем задавать синусоиду 
+на этом интервале вектором. Начальная точка синусоиды в центре координат, 
+конечную указывает заданный вектор. Для вычисления опорных точек можно 
+использовать заранее вычисленные коэффициенты:
+
+<br><br>
+<div class="textleft divFrame collapsed" style="BACKGROUND-COLOR:#F5F5F5; BORDER: #dcdcdc 1px solid; " id="DivFrame2">
+<div class="headsmall divTgl" style="BACKGROUND-COLOR: #696969; COLOR:#FFFFFF">pascal<a class="NavToggle" id="NavToggle2" href="javascript:collapseDiv(2);">[show]</a></div>
+<div class="content" style="font-size: 90%; padding-left: 0.3em; padding-right: 0.3em; display: none;">
+<pre class="text"><span class="RW">function</span> GetSinBezier(V:TGPoint; sin:boolean;
+                      <span class="RW">var</span> A, B, C, D:TGPoint):boolean;
+<span class="RW">begin</span>
+   result := false;
+   <span class="RW">if</span> (abs(V.x) &lt; <span class="NC">0.001</span>) or (abs(V.y) &lt; <span class="NC">0.001</span>) <span class="RW">then</span> exit;
+   result := true;
+
+   A.x := <span class="NC">0</span>;
+   A.y := <span class="NC">0</span>;
+   <span class="RW">if</span> sin <span class="RW">then begin</span>
+      B.x := <span class="NC">1</span>/<span class="NC">3</span> * abs(V.x);
+      B.y := <span class="NC">0.534295</span> * abs(V.y);
+      C.x := <span class="NC">2</span>/<span class="NC">3</span> * abs(V.x);
+      C.y := abs(V.y);
+   <span class="RW">end else begin</span>
+      B.x := <span class="NC">1</span>/<span class="NC">3</span> * abs(V.x);
+      B.y := <span class="NC">0</span>;
+      C.x := <span class="NC">2</span>/<span class="NC">3</span> * abs(V.x);
+      C.y := (<span class="NC">1</span>-<span class="NC">0.534295</span>) * abs(V.y)
+   <span class="RW">end</span>;
+   D.x := abs(V.x);
+   D.y := abs(V.y);
+
+   <span class="RW">if</span> V.x &gt; <span class="NC">0</span> <span class="RW">then begin</span>
+      <span class="RW">if</span> V.y &gt; <span class="NC">0</span> <span class="RW">then begin</span>
+      <span class="RW">end else begin</span>
+         B.y := -B.y;
+         C.y := -C.y;
+         D.y := -D.y;
+      <span class="RW">end</span>
+   <span class="RW">end else begin</span>
+      <span class="RW">if</span> V.y &gt; <span class="NC">0</span> <span class="RW">then begin</span>
+         B.x := -B.x;
+         C.x := -C.x;
+         D.x := -D.x;
+      <span class="RW">end else begin</span>
+         B.x := -B.x; B.y := -B.y;
+         C.x := -C.x; C.y := -C.y;
+         D.x := -D.x; D.y := -D.y;
+      <span class="RW">end</span>
+   <span class="RW">end</span>;
+<span class="RW">end</span>;
+</pre></div></div>
+<p></p>
+Здесь V - вектор, задающий направление. sin - задает отклонение кривой 
+от вектора. true соответствует отклонению вправо, если смотреть по 
+направлению вектора. A, B, C, D - опорные точки кривой Безье.
+Построим несколько участков синусоиды (исходный код примера в приложении):
+
+<br>
+<br><img src="./Кривые Безье.Применение_files/b6.png">
+<br clear="both">
+
+<br>
+<h2><span class="headline" id="head_5">Аппроксимация параболы кривыми Безье</span></h2>
+Как известно, параболу можно построить по трем точкам. Возьмем, например, 
+точку перегиба параболы и любую другую точку кривой. Тогда третью точку 
+можно получить простым отражением. Мы приходим к той-же схеме, что и для 
+синусоиды, т.е. используем вектор для задания двух точек. 
+
+<br><br>
+<div class="textleft divFrame collapsed" style="BACKGROUND-COLOR:#F5F5F5; BORDER: #dcdcdc 1px solid; " id="DivFrame3">
+<div class="headsmall divTgl" style="BACKGROUND-COLOR: #696969; COLOR:#FFFFFF">pascal<a class="NavToggle" id="NavToggle3" href="javascript:collapseDiv(3);">[show]</a></div>
+<div class="content" style="font-size: 90%; padding-left: 0.3em; padding-right: 0.3em; display: none;">
+<pre class="text"><span class="RW">function</span> GetParabolaBezier(V:TGPoint; right:boolean;
+                                   <span class="RW">var</span> A, B, C, D:TGPoint):boolean;
+<span class="RW">var</span> x<span class="NC">1</span>, x<span class="NC">2</span>, x<span class="NC">3</span>, y<span class="NC">1</span>, y<span class="NC">2</span>, y<span class="NC">3</span> : Single;
+    A<span class="NC">1</span>, B<span class="NC">1</span>, C<span class="NC">1</span>:Single;
+<span class="RW">begin</span>
+   result := false;
+   <span class="RW">if</span> (abs(V.x) &lt; <span class="NC">0.001</span>) or (abs(V.y) &lt; <span class="NC">0.001</span>) <span class="RW">then</span> exit;
+   result := true;
+
+   <span class="CM">// Для определения коэффициентов параболы нужны две точки</span>
+   <span class="CM">// Третью получаем отражением относительно оси OY</span>
+   <span class="RW">if</span> right <span class="RW">then begin</span>  <span class="CM">// Первая точка - точка изгиба</span>
+      x<span class="NC">2</span> := <span class="NC">0</span>;    y<span class="NC">2</span> := <span class="NC">0</span>;
+      x<span class="NC">3</span> := V.x;  y<span class="NC">3</span> := V.y;
+      x<span class="NC">1</span> := -V.x; y<span class="NC">1</span> := V.y;
+   <span class="RW">end else begin</span>       <span class="CM">// Точку изгиба указывает вектор</span>
+      x<span class="NC">1</span> := <span class="NC">0</span>;     y<span class="NC">1</span> := <span class="NC">0</span>;
+      x<span class="NC">2</span> := V.x;   y<span class="NC">2</span> := V.y;
+      x<span class="NC">3</span> := V.x*<span class="NC">2</span>; y<span class="NC">3</span> := <span class="NC">0</span>;
+   <span class="RW">end</span>;
+
+   <span class="CM">// Определяем коэффициенты параболы y = A*x^2 + B*x + C</span>
+   A<span class="NC">1</span> := (y<span class="NC">3</span> - (x<span class="NC">3</span>*(y<span class="NC">2</span>-y<span class="NC">1</span>)+x<span class="NC">2</span>*y<span class="NC">1</span>-x<span class="NC">1</span>*y<span class="NC">2</span>)/(x<span class="NC">2</span>-x<span class="NC">1</span>)) /
+         (x<span class="NC">3</span>*(x<span class="NC">3</span>-x<span class="NC">1</span>-x<span class="NC">2</span>)+x<span class="NC">1</span>*x<span class="NC">2</span>);
+   B<span class="NC">1</span> := (y<span class="NC">2</span>-y<span class="NC">1</span>)/(x<span class="NC">2</span>-x<span class="NC">1</span>)-A<span class="NC">1</span>*(x<span class="NC">1</span>+x<span class="NC">2</span>);
+   C<span class="NC">1</span> := (x<span class="NC">2</span>*y<span class="NC">1</span>-x<span class="NC">1</span>*y<span class="NC">2</span>)/(x<span class="NC">2</span>-x<span class="NC">1</span>)+A<span class="NC">1</span>*(x<span class="NC">1</span>*x<span class="NC">2</span>);
+
+   <span class="CM">// Первая и последняя точки известны</span>
+   <span class="RW">if</span> right <span class="RW">then begin</span>
+      A := makePoint(x<span class="NC">2</span>, y<span class="NC">2</span>);
+      D := makePoint(x<span class="NC">3</span>, y<span class="NC">3</span>);
+   <span class="RW">end else begin</span>
+      A := makePoint(x<span class="NC">1</span>, y<span class="NC">1</span>);
+      D := makePoint(x<span class="NC">2</span>, y<span class="NC">2</span>);
+   <span class="RW">end</span>;
+   <span class="CM">// Вычисляем еще две точки</span>
+   B.x := A.x + (D.x-A.x)/<span class="NC">3</span>;
+   C.x := A.x + (D.x-A.x)/<span class="NC">3</span>*<span class="NC">2</span>;
+   B.y := A<span class="NC">1</span>*B.x*B.x+B<span class="NC">1</span>*B.x+C<span class="NC">1</span>;
+   C.y := A<span class="NC">1</span>*C.x*C.x+B<span class="NC">1</span>*C.x+C<span class="NC">1</span>;
+
+   ToBezier(A, B, C, D);
+<span class="RW">end</span>;
+</pre></div></div>
+<p></p>
+<img src="./Кривые Безье.Применение_files/b7.png">
+<br clear="both">
+
+<br>
+<h2><span class="headline" id="head_6">Соединение точек плавной кривой в GDI+</span></h2>
+Естественно, GDI+ имеет средства для соединения точек плавной кривой. 
+Можно строить как замкнутые, так и не замкнутые кривые. 
+
+<br>
+<br><img src="./Кривые Безье.Применение_files/b9.png">
+
+<br>
+<br>Если интересен пример, смотрите код в прикрепленном архиве. Нас же больше 
+интересует сам принцип построения таких кривых. 
+
+<br>
+<br>
+<div class="textleft">
+<div class="content"><img src="./Кривые Безье.Применение_files/b8.png"></div>
+<div class="divfoot">-</div></div>
+
+<br>
+<br>Пусть, например, плавная кривая должна пройти через точки P<span class="NC">0</span>, P<span class="NC">1</span>, P<span class="NC">2</span>, 
+т.е. кривая будет состоять из двух кривых Безье. Для плавного соединения 
+этих кривых в точке P<span class="NC">1</span> нужно чтобы три последовательных опорных точки 
+A, P<span class="NC">1</span>, и B лежали на одной прямой. По сути для получения опорных точек 
+нам нужно найти касательную к кривой в точке P<span class="NC">1.</span> Зная касательную и выбрав 
+на ней точки A и B мы получим опорные точки для построения кривой Безье. 
+Повторив этот расчет для каждой заданной точки мы получим серию опорных 
+точек по которым сможем построить несколько кривых Безье.
+Вместе эти кривые называются сплайном. Т.к. мы рассматриваем кубические 
+кривые Безье, то и сплайн называется кубическим Безье сплайном 
+(cubic Bezier spline). Соответственно из квадратичных кривых Безье 
+можно построить квадратичный Безье сплайн (quadratic Bezier spline). 
+
+<br>
+<br>Возможны несколько различных подходов для построения таких касательных. 
+В каждом варианте будет получаться несколько отличающаяся кривая.
+<br clear="both">
+
+<br>
+<h2><span class="headline" id="head_7">Кубические сплайны Эрмита</span></h2>
+Кубические сплайны Эрмита (Cubic Hermite Splines) - это почти то-же самое, 
+что и кубические сплайны Безье. Можно рассматривать их просто как другой 
+способ задания кривых Безье. Вместо указания опорных точек мы в каждой 
+точке кривой задаем вектор. Направление и величина этого вектора определяют
+скорость с которой кривая будет отклоняться к заданной точке. 
+
+<br>
+<br>Например, на рисунке слева вид кривой определяется векторами U и V, 
+заданными для точек A и D, а на рисунке справа та-же кривая задана 
+опорными точками B и C. Для преобразования векторов к опорным точкам кривой 
+Безье существуют простые формулы:
+
+<br><br>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td>
+<div class="divinner">
+<div class="content">
+<table class="hide" border="0" cellspacing="0" cellpadding="0"><tbody>
+<tr><td valign="top"><img src="./Кривые Безье.Применение_files/b10.png">
+
+
+
+
+
+</td><td valign="top"><pre class="mono"><img src="./Кривые Безье.Применение_files/p18.png" align="middle" alt="$ B = A + (U/3) $">
+<img src="./Кривые Безье.Применение_files/p19.png" align="middle" alt="$ C = D - (V/3) $">
+
+Обратное преобразование:
+
+<img src="./Кривые Безье.Применение_files/p20.png" align="middle" alt="$ U = 3 (B - A) $">
+<img src="./Кривые Безье.Применение_files/p21.png" align="middle" alt="$ V = 3 (D - C) $"></pre></td><td valign="top"><pre class="mono"><img src="./Кривые Безье.Применение_files/b11.png">
+</pre></td></tr></tbody></table></div></div></td></tr></tbody></table>
+<p></p>
+<h2><span class="headline" id="head_8">Сплайны Катмулла-Рома</span></h2>
+Сплайны Катмулла-Рома (Catmull-Rom spline) можно рассматривать как вариант 
+построения кубических сплайнов Эрмита. 
+
+<br>
+<br>
+<div class="textleft">
+<div class="content"><img src="./Кривые Безье.Применение_files/b12.png"></div>
+<div class="divfoot">-</div></div>
+Например, нужно получить вектор для точки D из последовательности A, D, E.
+Возьмем отрезок AE (соединяющий две соседние с точкой D точки) и перенесем 
+его так, чтобы его центр совпал с точкой D. Половина этого отрезка и даст 
+нам нужный вектор. Теперь остается по этому вектору получить опорные точки 
+и построить кривую Безье. 
+
+<br>
+<br>Открытым остается вопрос что делать на концах последовательности. Если мы 
+строим замкнутую кривую, то для первой точки списка соседней будет последняя 
+и наоборот. Когда же мы строим не замкнутую кривую, то возможны варианты:
+
+<br>
+<br>
+<ul class="list">
+ <li> считать соседними те-же точки, что и для замкнутой кривой. 
+</li>
+ <li> крайнюю точку считать соседней самой себе. 
+</li>
+ <li> дополнить список еще двумя точками, которые нужны только для получения
+крайних кривых Безье. 
+<br clear="both">
+</li></ul><br>
+<div class="textleft divFrame" style="BACKGROUND-COLOR:#F5F5F5; BORDER: #dcdcdc 1px solid; " id="DivFrame4">
+<div class="headsmall divTgl" style="BACKGROUND-COLOR: #696969; COLOR:#FFFFFF">pascal<a class="NavToggle" id="NavToggle4" href="javascript:collapseDiv(4);">[hide]</a></div>
+<div class="content" style="font-size:90%; PADDING-LEFT: 0.3em; PADDING-RIGHT: 0.3em; ">
+<pre class="text"><span class="RW">function</span> toCMSlines(Points:<span class="RW">array of</span> TGPoint; 
+     closed:boolean=true; asClosed:boolean=true):ArrayOfPoint;
+<span class="RW">var</span> C, i, CE, N<span class="NC">1</span>, N<span class="NC">2</span>, k:integer;
+    P<span class="NC">1</span>, P<span class="NC">2</span>, P<span class="NC">0</span>, C<span class="NC">0</span>, B<span class="NC">0</span>, P<span class="NC">0</span>C:TGPoint;
+<span class="RW">begin</span>
+   k := <span class="NC">0</span>;
+   C := <span class="RW">High</span>(Points) - <span class="RW">Low</span>(Points) + <span class="NC">1</span>;
+   CE := C;
+   <span class="RW">if</span> not closed <span class="RW">then</span> dec(CE);
+   SetLength(result, CE * <span class="NC">3</span>+<span class="NC">1</span>);
+
+   <span class="RW">for</span> i := <span class="NC">0</span> <span class="RW">to</span> C-<span class="NC">1</span> <span class="RW">do begin</span>
+      P<span class="NC">0</span> := Points[i];
+
+      <span class="CM">// Получаем предыдущую и следующую точки</span>
+      N<span class="NC">1</span> := i-<span class="NC">1</span>;
+      <span class="RW">if</span> N<span class="NC">1</span> &lt; <span class="NC">0</span> <span class="RW">then</span>
+         <span class="RW">if</span> closed or asClosed <span class="RW">then</span> N<span class="NC">1</span> := C-<span class="NC">1</span> <span class="RW">else</span> N<span class="NC">1</span> := i;
+
+      N<span class="NC">2</span> := i+<span class="NC">1</span>;
+      <span class="RW">if</span> N<span class="NC">2</span> &gt; C-<span class="NC">1</span> <span class="RW">then</span>
+         <span class="RW">if</span> closed or asClosed <span class="RW">then</span> N<span class="NC">2</span> := <span class="NC">0</span> <span class="RW">else</span> N<span class="NC">2</span> := i;
+
+      P<span class="NC">1</span> := Points[N<span class="NC">1</span>];
+      P<span class="NC">2</span> := Points[N<span class="NC">2</span>];
+
+      <span class="CM">// Половина вектора (P1,P2)</span>
+      P<span class="NC">2.</span>X := (P<span class="NC">2.</span>X - P<span class="NC">1.</span>X)/<span class="NC">2</span>;
+      P<span class="NC">2.</span>Y := (P<span class="NC">2.</span>Y - P<span class="NC">1.</span>Y)/<span class="NC">2</span>;
+
+      <span class="CM">// Опорные точки двух соседних кривых Безье</span>
+      C<span class="NC">0.</span>X := P<span class="NC">0.</span>X - P<span class="NC">2.</span>X/<span class="NC">3</span>;
+      C<span class="NC">0.</span>Y := P<span class="NC">0.</span>Y - P<span class="NC">2.</span>Y/<span class="NC">3</span>;
+      B<span class="NC">0.</span>X := P<span class="NC">0.</span>X + P<span class="NC">2.</span>X/<span class="NC">3</span>;
+      B<span class="NC">0.</span>Y := P<span class="NC">0.</span>Y + P<span class="NC">2.</span>Y/<span class="NC">3</span>;
+
+      <span class="RW">if</span> i = <span class="NC">0</span>
+      <span class="RW">then</span> P<span class="NC">0</span>C := C<span class="NC">0</span>
+      <span class="RW">else begin</span>
+         result[k] := C<span class="NC">0</span>; inc(k);
+      <span class="RW">end</span>;
+      result[k] := P<span class="NC">0</span>; inc(k);
+      <span class="RW">if</span> (i &lt; C-<span class="NC">1</span>) or closed <span class="RW">then begin</span>
+         result[k] := B<span class="NC">0</span>; inc(k);
+      <span class="RW">end</span>;
+   <span class="RW">end</span>;
+   <span class="RW">if</span> closed <span class="RW">then begin</span>
+      result[k] := P<span class="NC">0</span>C; inc(k);
+      result[k] := Points[<span class="NC">0</span>];
+   <span class="RW">end</span>;
+<span class="RW">end</span>;
+</pre></div></div>
+Посмотрим на реализацию построения сплайна Катмулла-Рома. Функция toCMSlines
+по заданной последовательности точек вычисляет опорные точки кривых Безье. 
+(Полный пример смотрите в прикрепленном архиве). 
+
+<br>
+<br>Пример замкнутой и незамкнутой кривой:
+<img src="./Кривые Безье.Применение_files/b13.png">
+<img src="./Кривые Безье.Применение_files/b14.png">
+<br clear="both">
+
+<br>
+<h2><span class="headline" id="head_9">Сплайны Кочанека-Бартельса</span></h2>
+Сплайны Кочанека-Бартельса (Kochanek-Bartels splines) также являются 
+кубическими сплайнами Эрмита, но дополнены тремя параметрами. 
+Параметры называются tension, bias и continuity (натяжение, скос/склонение, 
+непрерывность) и изменяют вид касательной и, следовательно, всей кривой. 
+
+<br>
+<br>Формулы для получения двух векторов в каждой точке:
+
+<br>
+<br><pre class="mono"> <img src="./Кривые Безье.Применение_files/p22.png" align="middle" alt="$$ d_i = \frac {(1-t)(1+b)(1+c)}{2} (p_i - p_{i-1}) +  \frac {(1-t)(1-b)(1-c)}{2} (p_{i+1} - p_{i}) $$">
+ <img src="./Кривые Безье.Применение_files/p23.png" align="middle" alt="$$ d_{i+1} = \frac {(1-t)(1+b)(1-c)}{2} (p_i - p_{i-1}) +  \frac {(1-t)(1-b)(1+c)}{2} (p_{i+1} - p_{i}) $$">
+
+</pre>
+Если параметры равны нулю, мы получаем сплайн Катмулла-Рома. 
+
+<br>
+<br>Метод для вычисления точек кривых Безье по этим формулам 
+(полный пример в архиве):
+
+<br><br>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td>
+<div class="divinner divFrame collapsed" style="BACKGROUND-COLOR:#F5F5F5; BORDER: #dcdcdc 1px solid; " id="DivFrame5">
+<div class="headsmall divTgl" style="BACKGROUND-COLOR: #696969; COLOR:#FFFFFF">pascal<a class="NavToggle" id="NavToggle5" href="javascript:collapseDiv(5);">[show]</a></div>
+<div class="content" style="font-size: 90%; padding-left: 0.3em; padding-right: 0.3em; display: none;">
+<pre class="text"><span class="RW">function</span> toKBSlines(Points:<span class="RW">array of</span> TGPoint; pt, pb, pc : Single;
+               closed:boolean=true; asClosed:boolean=true):ArrayOfPoint;
+<span class="RW">var</span> C, i, CE, N<span class="NC">1</span>, N<span class="NC">2</span>, N<span class="NC">3</span>, k:integer;
+    P<span class="NC">1</span>, P<span class="NC">2</span>, P<span class="NC">3</span>, P<span class="NC">0</span>, C<span class="NC">0</span>, B<span class="NC">0</span>, P<span class="NC">0</span>C, d<span class="NC">0</span>, d<span class="NC">1</span>:TGPoint;
+<span class="RW">begin</span>
+   k := <span class="NC">0</span>;
+   C := <span class="RW">High</span>(Points) - <span class="RW">Low</span>(Points) + <span class="NC">1</span>;
+   CE := C;
+   <span class="RW">if</span> not closed <span class="RW">then</span> dec(CE);
+   SetLength(result, CE * <span class="NC">3</span>+<span class="NC">1</span>);
+
+   <span class="RW">for</span> i := <span class="NC">0</span> <span class="RW">to</span> C-<span class="NC">1</span> <span class="RW">do begin</span>
+      P<span class="NC">0</span> := Points[i];
+
+      <span class="CM">// Получаем предыдущую и следующую точки</span>
+      N<span class="NC">1</span> := i-<span class="NC">1</span>;
+      <span class="RW">if</span> N<span class="NC">1</span> &lt; <span class="NC">0</span> <span class="RW">then</span>
+         <span class="RW">if</span> closed or asClosed <span class="RW">then</span> N<span class="NC">1</span> := C-<span class="NC">1</span> <span class="RW">else</span> N<span class="NC">1</span> := i;
+
+      N<span class="NC">2</span> := i+<span class="NC">1</span>;
+      <span class="RW">if</span> N<span class="NC">2</span> &gt; C-<span class="NC">1</span> <span class="RW">then</span>
+         <span class="RW">if</span> closed or asClosed <span class="RW">then</span> N<span class="NC">2</span> := <span class="NC">0</span> <span class="RW">else</span> N<span class="NC">2</span> := i;
+
+      N<span class="NC">3</span> := N<span class="NC">2</span>+<span class="NC">1</span>;
+      <span class="RW">if</span> N<span class="NC">3</span> &gt; C-<span class="NC">1</span> <span class="RW">then</span> N<span class="NC">3</span> := <span class="NC">0</span>;
+
+      P<span class="NC">1</span> := Points[N<span class="NC">1</span>];
+      P<span class="NC">2</span> := Points[N<span class="NC">2</span>];
+      P<span class="NC">3</span> := Points[N<span class="NC">3</span>];
+
+      d<span class="NC">0.</span>x := (<span class="NC">1</span>-pt)*(<span class="NC">1</span>+pb)*(<span class="NC">1</span>+pc)/<span class="NC">2</span> * (P<span class="NC">0.</span>x-P<span class="NC">1.</span>x) +
+              (<span class="NC">1</span>-pt)*(<span class="NC">1</span>-pb)*(<span class="NC">1</span>-pc)/<span class="NC">2</span> * (P<span class="NC">2.</span>x-P<span class="NC">0.</span>x);
+      d<span class="NC">0.</span>y := (<span class="NC">1</span>-pt)*(<span class="NC">1</span>+pb)*(<span class="NC">1</span>+pc)/<span class="NC">2</span> * (P<span class="NC">0.</span>y-P<span class="NC">1.</span>y) +
+              (<span class="NC">1</span>-pt)*(<span class="NC">1</span>-pb)*(<span class="NC">1</span>-pc)/<span class="NC">2</span> * (P<span class="NC">2.</span>y-P<span class="NC">0.</span>y);
+      d<span class="NC">1.</span>x := (<span class="NC">1</span>-pt)*(<span class="NC">1</span>+pb)*(<span class="NC">1</span>-pc)/<span class="NC">2</span> * (P<span class="NC">0.</span>x-P<span class="NC">1.</span>x) +
+              (<span class="NC">1</span>-pt)*(<span class="NC">1</span>-pb)*(<span class="NC">1</span>+pc)/<span class="NC">2</span> * (P<span class="NC">2.</span>x-P<span class="NC">0.</span>x);
+      d<span class="NC">1.</span>y := (<span class="NC">1</span>-pt)*(<span class="NC">1</span>+pb)*(<span class="NC">1</span>-pc)/<span class="NC">2</span> * (P<span class="NC">0.</span>y-P<span class="NC">1.</span>y) +
+              (<span class="NC">1</span>-pt)*(<span class="NC">1</span>-pb)*(<span class="NC">1</span>+pc)/<span class="NC">2</span> * (P<span class="NC">2.</span>y-P<span class="NC">0.</span>y);
+
+      <span class="CM">// Опорные точки двух соседних кривых Безье</span>
+      C<span class="NC">0.</span>X := P<span class="NC">0.</span>X - d<span class="NC">0.</span>X/<span class="NC">3</span>;
+      C<span class="NC">0.</span>Y := P<span class="NC">0.</span>Y - d<span class="NC">0.</span>Y/<span class="NC">3</span>;
+      B<span class="NC">0.</span>X := P<span class="NC">0.</span>X + d<span class="NC">1.</span>X/<span class="NC">3</span>;
+      B<span class="NC">0.</span>Y := P<span class="NC">0.</span>Y + d<span class="NC">1.</span>Y/<span class="NC">3</span>;
+
+      <span class="RW">if</span> i = <span class="NC">0</span>
+      <span class="RW">then</span> P<span class="NC">0</span>C := C<span class="NC">0</span>
+      <span class="RW">else begin</span>
+         result[k] := C<span class="NC">0</span>; inc(k);
+      <span class="RW">end</span>;
+      result[k] := P<span class="NC">0</span>; inc(k);
+      <span class="RW">if</span> (i &lt; C-<span class="NC">1</span>) or closed <span class="RW">then begin</span>
+         result[k] := B<span class="NC">0</span>; inc(k);
+      <span class="RW">end</span>;
+   <span class="RW">end</span>;
+   <span class="RW">if</span> closed <span class="RW">then begin</span>
+      result[k] := P<span class="NC">0</span>C; inc(k);
+      result[k] := Points[<span class="NC">0</span>];
+   <span class="RW">end</span>;
+<span class="RW">end</span>;
+</pre></div></div></td></tr></tbody></table>
+<p></p>
+В теории значения параметров должны лежать в пределах [-<span class="NC">1</span>, <span class="NC">1</span>]. 
+Посмотрим как меняется вид кривой в зависимости от параметров:
+
+<br><br>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td>
+<div class="divinner">
+<div class="content">
+<table class="standard"><tbody>
+<tr><td valign="top">параметр</td><td valign="top">Вид кривой для значений параметра <span class="NC">2</span>, <span class="NC">1</span>, <span class="NC">0</span>, <span class="NC">-1</span>
+</td></tr><tr><td valign="top">t</td><td valign="top"><pre class="mono"><img src="./Кривые Безье.Применение_files/b15t.png">
+</pre></td></tr><tr><td valign="top">b</td><td valign="top"><pre class="mono"><img src="./Кривые Безье.Применение_files/b15b.png">
+</pre></td></tr><tr><td valign="top">c</td><td valign="top"><pre class="mono"><img src="./Кривые Безье.Применение_files/b15c.png">
+</pre></td></tr></tbody></table></div></div></td></tr></tbody></table>
+<p></p>
+<h2><span class="headline" id="head_10">Литература</span></h2>
+
+<ul class="list">
+ <li> Squirrel Eiserloh. <a href="http://gdcvault.com/play/1644" target="_blank">Interpolation and Splines</a>
+</li>
+ <li> <a href="http://en.wikipedia.org/wiki/Cubic_Hermite_spline" target="_blank">Cubic Hermite spline</a>
+</li>
+ <li> <a href="http://en.wikipedia.org/wiki/Kochanek-Bartels_spline" target="_blank">Kochanek-Bartels spline</a>
+</li>
+ <li> David Eberly <a href="http://www.geometrictools.com/Documentation/KBSplines.pdf" target="_blank">Kochanek-Bartels Cubic Splines (TCB Splines)</a>
+</li></ul>
+<div class="line"></div>
+<p></p>
+<table cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td>
+<div class="divinner" style="">
+<div class="content">
+<table class="tiles" width="100%"><tbody>
+<tr><th align="right" valign="top"><small><span class="NC">13</span> марта <span class="NC">2010</span></small>
+</th></tr></tbody></table></div></div></td></tr></tbody></table>
+<p></p> <div style="PADDING-RIGHT: 5%; PADDING-LEFT: 5%; PADDING-BOTTOM: 0px; PADDING-TOP: 8px">
+    <fieldset class="fieldset"><legend>Downloads</legend>
+
+      <table cellspacing="3" cellpadding="0" border="0">
+        <tbody>
+        <tr><td>
+    <a href="http://alex-black.ru/downloadfile.php?fileid=109">Тестовое приложение с кодом, приведенным в статье (bezier_1.zip)</a> (132.3 Кб, просмотров:  368
+)<br>        </td></tr>
+        </tbody>
+      </table>
+   </fieldset> 
+ </div>
+    
+<p></p>      <div class="commentfont" style="PADDING-RIGHT: 5%; PADDING-LEFT: 5%; PADDING-BOTTOM: 8px; PADDING-TOP: 0px">
+      <fieldset class="fieldset"><legend>Comments</legend>
+          <table cellspacing="3" cellpadding="0" border="0" width="100%">
+      <tbody><tr><td>
+      </td></tr><tr><td bgcolor="#FFFFB7" width="100%">09.01.2011 12:31 <b> Артем </b> </td></tr><tr><td><pre> Здорово. С первого раза нашел то, что надо (первый раз не пришлось самому всё вычислять).
+ 
+</pre></td></tr><tr><td bgcolor="#FFFFB7" width="100%">05.02.2012 09:42 <b> Айзат </b> </td></tr><tr><td><pre> большое спасибо, очень помогло
+
+
+ 
+ 
+</pre>      </td></tr>
+      </tbody></table>
+      
+      <div class="commentfont" style="PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px;">
+      <fieldset class="fieldset"><legend>Вы можете оставить комментарий или задать вопрос</legend>
+         <table class="tborder" cellspacing="1" cellpadding="8" width="100%" align="center" border="0">
+         <tbody><tr><td>
+
+           <form action="http://alex-black.ru/article.php" method="post" align="middle">
+                          Ваше имя: <br><input type="text" name="nik" size="20" maxlength="25" value="" width="20%">
+             <br>
+             Текст сообщения:
+             <textarea name="comments" rows="3" width="100%" style="width:100%"></textarea>
+             <input type="hidden" name="datatosave" value="y">
+             <input type="hidden" name="content" value="109">
+
+             <br>
+             <input type="submit" value="Сохранить" name="Sub"> 
+           </form>
+
+         </td></tr>
+         </tbody>
+         </table>
+      </fieldset> 
+      </div>
+
+      </fieldset> 
+      </div>
+    
+<p></p></td></tr></tbody></table>
+
+<script type="text/javascript"> collapsibleDivs(); </script>
+<div class="fsmallfont" align="right">
+<br>Copyright © 2009-2014 by <a href="https://plus.google.com/118353884619443877078" rel="author">alexBlack</a>
+</div>
+<hr>
+
+
+
+</body></html>

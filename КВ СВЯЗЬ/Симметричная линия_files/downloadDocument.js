@@ -1,0 +1,1 @@
+(function(b){b.modules.downloadDocument=function(a){var c;a.showpreview&&(a=b("#cc-m-download-preview-"+a.id),c=a.width()/1.33,a.html('\x3ciframe src\x3d"http://docs.google.com/viewer?url\x3d\x3c?php echo urlencode($this-\x3edownloadUrl) ?\x3e\x26embedded\x3dtrue" width\x3d"100%" height\x3d"'+c+'" style\x3d"border: none;"\x3e\x3c/iframe\x3e'))}})(jimdoGen002);

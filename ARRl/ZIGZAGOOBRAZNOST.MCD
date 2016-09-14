@@ -1,0 +1,131 @@
+.MCAD 304010000 1 74 176 0
+.CMD PLOTFORMAT
+0 0 1 1 1 0 0 1 1 
+0 0 1 1 1 0 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 21 15 0 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 0.989583 1.200000 1.200000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD HEADER_FOOTER_FONT fontID=15 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFAULT_TEXT_PARPROPS 0 0 0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=MS^Serif points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=1 family=MS^Serif points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=2 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=4 family=MS^Sans^Serif points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=10 family=MS^Serif points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.CMD COLORTAB_ENTRY 0 0 0
+.CMD COLORTAB_ENTRY 128 0 0
+.CMD COLORTAB_ENTRY 0 128 0
+.CMD COLORTAB_ENTRY 128 128 0
+.CMD COLORTAB_ENTRY 0 0 128
+.CMD COLORTAB_ENTRY 128 0 128
+.CMD COLORTAB_ENTRY 0 128 128
+.CMD COLORTAB_ENTRY 128 128 128
+.CMD COLORTAB_ENTRY 192 192 192
+.CMD COLORTAB_ENTRY 255 0 0
+.CMD COLORTAB_ENTRY 0 255 0
+.CMD COLORTAB_ENTRY 255 255 0
+.CMD COLORTAB_ENTRY 0 0 255
+.CMD COLORTAB_ENTRY 255 0 255
+.CMD COLORTAB_ENTRY 0 255 255
+.CMD COLORTAB_ENTRY 255 255 255
+.EQN 4 2 29 0 0
+{0:Zïîðäîï}NAME:-45
+.EQN 0 16 32 0 0
+{0:Fïä1}NAME:-30
+.EQN 0 18 21 0 0
+{0:deltaPïä}NAME:0
+.EQN 0 18 123 0 0
+{0:H}NAME:-610
+.EQN 3 -52 30 0 0
+{0:Rìi}NAME:149.74
+.EQN 0 34 35 0 0
+{0:deltaGïä}NAME:0
+.EQN 1 -18 33 0 0
+{0:Fïì4}NAME:-15
+.EQN 2 -16 96 0 0
+{0:Rj}NAME:33.1
+.EQN 0 34 36 0 0
+{0:delta\hïä}NAME:-0.4
+.EQN 1 -18 34 0 0
+{0:Vj}NAME:0
+.EQN 2 18 121 0 0
+{0:R1}NAME:54.24
+.EQN 1 -34 116 0 0
+{0:L}NAME:6
+.EQN 0 16 119 0 0
+{0:Kô}NAME:0
+.EQN 6 -17 124 0 0
+{0:Vìäîïi}NAME:{0:Zïîðäîï}NAME-{0:Fïä1}NAME-{0:Fïì4}NAME+20*{0:log}NAME(({0:Rìi}NAME)/({0:Rj}NAME))+{0:Vj}NAME-{0:deltaPïä}NAME-{0:deltaGïä}NAME+{0:delta\hïä}NAME
+.EQN 4 0 125 0 0
+{0:Vìäîïi}NAME={0}?_n_u_l_l_
+.EQN 4 52 132 0 0
+{0:K}NAME:({0:R1}NAME)/({0:Rìi}NAME)
+.EQN 1 -52 126 0 0
+{0:\x}NAME:-((0.05*({0:Vìäîïi}NAME-{0:L}NAME)-{0:log}NAME(2-(10)^(0.05*({0:Vìäîïi}NAME-{0:L}NAME))))/(0.8686))
+.EQN 3 52 134 0 0
+{0:K}NAME={0}?_n_u_l_l_
+.EQN 2 -52 127 0 0
+{0:\x}NAME={0}?_n_u_l_l_
+.EQN 6 0 138 0 0
+{0:\Qý}NAME:-(({0:H}NAME+2*(10)^(-8)*{0:Rìi}NAME*{0:Rìi}NAME*{0:K}NAME*(1-{0:K}NAME))/({0:Rìi}NAME*{0:K}NAME*(1-{0:K}NAME)))
+.EQN 4 30 163 0 0
+{0:\Qý}NAME={0}?_n_u_l_l_
+.EQN 1 -30 139 0 0
+{0:Rýì}NAME:8500*{0:\Qý}NAME
+.EQN 4 0 140 0 0
+{0:Rýì}NAME={0}?_n_u_l_l_
+.EQN 5 0 146 0 0
+{0:Aì}NAME:1.037+{0:Rýì}NAME*7.604*(10)^(-3)-{0:Rýì}NAME*{0:Rýì}NAME*1.118*(10)^(-6)-(50*{0:Kô}NAME)/({0:Rýì}NAME+50)
+.EQN 5 0 147 0 0
+{0:Aì}NAME={0}?_n_u_l_l_
+.EQN 4 0 155 0 0
+{0:Bì}NAME:3.185*(10)^(-4)*(2000-{0:Rýì}NAME)
+.EQN 4 0 156 0 0
+{0:Bì}NAME={0}?_n_u_l_l_
+.EQN 7 0 157 0 0
+{0:T14i}NAME:(10)^(({0:\x}NAME-{0:Aì}NAME)/({0:Bì}NAME))
+.EQN 2 47 175 0 0
+{0:Fïä1}NAME+{0:Fïì4}NAME={0}?_n_u_l_l_
+.EQN 3 -47 158 0 0
+{0:T14i}NAME={0}?_n_u_l_l_
+.EQN 1 17 176 0 0
+{0:Zïîðäîï}NAME+20*{0:log}NAME(({0:Rìi}NAME)/({0:Rj}NAME))-{0:deltaPïä}NAME-{0:deltaGïä}NAME+{0:delta\hïä}NAME={0}?_n_u_l_l_

@@ -1,0 +1,310 @@
+BODY
+ {
+   BACKGROUND: #FFFFA4;
+   margin-bottom: 4px;
+   margin-left: 4px;
+   margin-right: 4px;
+   margin-top: 4px;
+}
+
+H1
+  {
+   font-weight: bold;
+   font-size: 19pt;
+   TEXT-ALIGN: center;
+   color: #151515;
+   letter-spacing: -1pt;
+   line-height: 120%;
+   margin-left: 0;
+   margin-right: 0;
+   margin-top: 10;
+   margin-bottom: 4;
+}
+
+H2
+  {
+   font-weight: bold;
+   font-size: 18pt;
+   TEXT-ALIGN: center;
+   line-height: 120%;
+   color: #151515;
+   font-style: italic;
+   margin-left: 0;
+   margin-right: 0;
+   margin-top: 10;
+   margin-bottom: 4;
+}
+
+H3
+  {
+   font-weight: bold;
+   font-style: italic;
+   font-size: 17pt;
+   TEXT-ALIGN: center;
+   color: #151515;
+   line-height: 120%;
+   margin-top: 8;
+   margin-bottom: 4;
+}
+
+H4
+  {
+   font-weight: bold;
+   font-size: 16pt;
+   TEXT-ALIGN: center;
+   color: #151515;
+   line-height: 120%;
+   margin-top: 8;
+   margin-bottom: 4;
+}
+
+H5
+  {
+   font-weight: bold;
+   TEXT-ALIGN: center;
+   color: #151515;
+   font-variant: normal;
+   font-size: 15pt;
+   font-weight: bold;
+   letter-spacing: -1pt;
+   height: 2pt;
+   line-height: 120%;
+   margin-top: 5;
+   margin-bottom: 4;
+}
+
+H6 
+  {
+   font-weight: bold;
+   TEXT-ALIGN: center;
+   font-size: 14pt;
+   color: #151515;
+   font-style: italic;
+   line-height: 120%;
+   margin-top: 6;
+   margin-bottom: 4;
+}
+P
+ {
+   margin: 4pt 4;
+   FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+   TEXT-INDENT: 2em;
+   text-indent: 4;
+   font-size: 10px;
+   font-weight: bold;
+   text-align: left; 
+   line-height:150%
+}
+.text       
+	{ 
+	font-size: 10pt; 
+	font-weight: bold; 
+	text-align: left; 
+	text-indent: 4; 
+     line-height: 120%; 
+     margin: 2 4 
+     }
+.menu
+   {
+   font-family: Arial;
+   font-size: 8pt;
+   font-style: normal;
+   font-weight: bold;
+   height: auto;
+   text-align: center
+}
+.snoska
+   {
+   font-size: 8pt;
+   font-style: italic;
+   font-weight: normal;
+}
+
+.anot
+   {
+   line-height: normal;
+   font-size: 10pt; 
+   font-family:Verdana; 
+   text-indent:2; 
+   text-align:justify; 
+   margin-left:150; 
+   margin-right:150; 
+   margin-top:12; 
+   margin-bottom:15
+}
+
+.diva {
+	margin-left:20; 
+   margin-right:20; 
+   margin-top:1; 
+   margin-bottom:1
+}
+
+.formula
+   {
+	font-family: Verdana;
+	font-size: 14pt;
+	height: auto;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 2px;
+	font-style: italic;
+	text-decoration: none;
+	line-height:150%
+}
+.vid1
+   {
+   margin:1 2; 
+   font-size: 10pt;
+   font-style: normal;
+   font-variant: small-caps;
+   font-weight: bold;
+   height: auto;
+   letter-spacing: 1pt
+}
+.vid2{
+   font-size: 10pt;
+   font-style: normal;
+   font-variant: normal;
+   font-weight: bold;
+   color: #008000;
+   letter-spacing: 1px;
+   text-decoration:none; 
+   margin-top:1; 
+   margin-bottom:1
+}
+.vid3{
+   font-size: 10pt;
+   font-style: normal;
+   font-variant: normal;
+   font-weight: bold;
+   color: #FF0000;
+   letter-spacing: 1px;
+}
+.tableC {
+	text-align : center;
+	width: 85%;
+}
+
+
+Pm {
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-size: 10pt;
+   text-align: left;
+   line-height: normal;
+   font-weight: bold;
+   text-indent: 12;
+   margin-left: 3;
+}
+
+
+PRE
+ {
+   font-weight: bold;
+   font-size: 10pt;
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+ 
+
+TT
+ {
+   font-weight: bold;
+   font-size: 10pt;
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+ 
+OL
+ {
+   margin-top: 4px;
+   margin-bottom: 4px;
+   font-size: 9pt;
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-style: italic;
+   line-height: 100%;
+}
+
+UL
+ {
+   margin-top: 0px;
+   margin-bottom: 0px;
+   font-size: 9pt;
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-style: italic;
+}
+
+li
+ {
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-size: 9pt;
+   font-weight: bold;
+   text-align: left;
+   margin-top: 4;
+   font-style: italic; 
+   line-height:100%; 
+   margin-bottom:4
+}
+
+TABLE
+ {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	line-height: 150%;
+	font-weight: bold;
+	text-indent: 10;
+	list-style-type: disc;
+	margin-left: 4px;
+	margin-right:4;
+	margin-top:4;
+	margin-bottom:4;
+	text-align : left;
+}
+
+TD P
+ {
+	margin: 4;
+	TEXT-ALIGN: left;
+	TEXT-INDENT: 10;
+	FONT-SIZE: 10pt;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	background: #FFFFEE;
+	line-height: 150%;
+}
+
+TD
+ {
+	margin: 4;
+	TEXT-ALIGN: left;
+	TEXT-INDENT: 10;
+	FONT-SIZE: 10pt;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	background: #FFFFEE;
+	line-height: 150%;
+}
+
+TH P
+ {
+   margin: 4;
+   TEXT-ALIGN: left;
+   TEXT-INDENT: 4;
+   FONT-SIZE: 10pt;
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   line-height: 150%;
+   font-style: italic;
+   background: #F2F2F2;
+}
+
+TH
+ {
+   margin: 4;
+   TEXT-ALIGN: left;
+   TEXT-INDENT: 4;
+   FONT-SIZE: 10pt;
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   line-height: 150%;
+   font-style: italic;
+   background: #F2F2F2;
+}

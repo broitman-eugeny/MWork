@@ -1,0 +1,262 @@
+
+body {
+	margin: 0;
+	padding: 0 0 120px;
+}
+
+.altcolor {
+	background-color: #FFFFFF;
+}
+
+/* Container */
+
+div#container {
+	margin: 0 auto;
+	width: 940px;
+}
+div#container_inner {
+	background: url(http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/container_bg_bottom.png) no-repeat 50% 100%;
+	margin: 0 -4px -6px;
+	padding: 0 4px 6px;
+	position: relative;
+	zoom: 1;
+}
+div#container_innermost {
+	background: url(http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/container_bg.png) repeat-y 50% 0;
+	margin: 0 -4px;
+	padding: 0 4px;
+	position: relative;
+	zoom: 1;
+}
+
+* html div#container_inner {
+	background-image: none;
+}
+* html div#container_innermost {
+	background-image: url(http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/container_bg.gif);
+}
+
+
+/* Header */
+
+div#header {
+	height: 210px;
+	position: relative;
+}
+div#emotion-header {
+	position: relative;
+}
+div#emotion-header strong#emotion-header-title {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+div#overlay_top {
+	width: 940px;
+	height: 25px;
+	background: url(http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/header_overlay_top.png) no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+div#overlay_bottom {
+	width: 940px;
+	height: 47px;
+	background: url(http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/header_overlay_bottom.png) no-repeat;
+	position: absolute;
+	top: 163px;
+	left: 0;
+	z-index: 3;
+}
+div#overlay_left {
+	width: 20px;
+	height: 210px;
+	background: url(http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/header_overlay_left.png) no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 4;
+}
+div#overlay_right {
+	width: 20px;
+	height: 210px;
+	background: url(http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/header_overlay_right.png) no-repeat;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 5;
+}
+
+* html div#overlay_top {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/header_overlay_top.png");
+	background-image: none;
+}
+* html div#overlay_bottom {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/header_overlay_bottom.png");
+	background-image: none;
+}
+* html div#overlay_left {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/header_overlay_left.png");
+	background-image: none;
+}
+* html div#overlay_right {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/header_overlay_right.png");
+	background-image: none;
+}
+
+
+/* Content */
+
+div#content {
+	width: 650px;
+	float: right;
+	margin-bottom: 40px;
+}
+div#content_wrapper {
+	padding: 0px 20px;
+	min-height: 560px;
+}
+
+
+/* Sidebar */
+
+div#sidebar {
+	width: 266px;
+	float: left;
+	margin-bottom: 40px;
+	padding: 0 9px 0 15px;
+}
+
+/* Navigation */
+
+div#navigation {
+	background-image: url(http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/sidebar_bg_top.gif);
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	margin: 0px -2px 15px;
+	padding: 40px 2px 0;
+}
+div#navigation_inner {
+	background: url(http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/sidebar_bg_bottom.png) no-repeat 50% 100%;
+	margin: 0 -2px 0px;
+	padding: 0 2px 20px;
+}
+div#navigation_innermost {
+	background: url(http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/sidebar_bg.png) repeat-y 50% 0;
+	margin: 0 -2px;
+	padding: 0 2px;
+}
+div#navigation_wrapper {
+	/*padding: 40px 0 30px 0;*/
+}
+
+ul.mainNav1 {
+	margin: 0;
+	padding: 0 0 0 20px;
+	list-style: none;
+}
+ul.mainNav1 li {
+	width: 241px;
+}
+ul.mainNav1 li a {
+	display: block;
+	width: 227px;
+	padding: 0 7px 4px;
+/*	height: 28px;*/
+	line-height: 30px;
+	text-decoration: none;
+	background: url(http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/mainNav_level1.png) no-repeat;
+}
+ul.mainNav1 li a:hover, ul.mainNav1 li a.current {
+	font-weight: bold;
+}
+ul.mainNav2 {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul.mainNav2 li a {
+	width: 205px;
+	padding: 0 7px 4px 29px;
+	background-image: url(http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/mainNav_level2.png);
+}
+ul.mainNav3 {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul.mainNav3 li a {
+	width: 183px;
+	padding: 0 7px 4px 51px;
+	background-image: url(http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/mainNav_level3.png);
+}
+
+* html div#navigation {
+	background-image: url(http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/sidebar_bg_top.gif);
+}
+* html div#navigation_inner {
+	background-image: url(http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/sidebar_bg_bottom.gif);
+}
+* html div#navigation_innermost {
+	background-image: url(http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/sidebar_bg.gif);
+}
+
+* html ul.mainNav1 li a {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/mainNav_level1.png", sizingMethod="crop");
+	background-image: none;
+}
+* html ul.mainNav2 li a {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/mainNav_level2.png", sizingMethod="crop");
+	background-image: none;
+}
+* html ul.mainNav3 li a {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/mainNav_level3.png", sizingMethod="crop");
+	background-image: none;
+}
+
+
+/* Sidebar-Inhalt */
+
+div#sidebar_content {
+	margin: 0 -2px;
+	padding: 40px 2px 0;
+	position: relative;
+	zoom: 1;
+}
+div#sidebar_content_inner {
+	margin: 0 -2px;
+	padding: 0 2px 20px;
+	position: relative;
+	zoom: 1;
+}
+div#sidebar_content_innermost {
+	margin: 0 -2px;
+	padding: 0 2px;
+	position: relative;
+	zoom: 1;
+}
+div#sidebar_content_wrapper {
+	padding: 1px 20px;
+}
+
+div#jimdobox {
+	margin-bottom: 20px;
+}
+
+
+/* Footer */
+
+div#footer {
+	clear: both;
+	background: #434445 url(http://u.jimdo.com/www29/o/layout/l6e9de4102b9d896f/img/footer_bg.gif) repeat-x;
+	color: #fff;
+	zoom: 1;
+}
+
+div#footer a {color: white; }
+
+div#footer_wrapper {
+	padding: 5px 20px;
+}

@@ -1,0 +1,545 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+
+<head>
+<title>Регламент системы &quot;Интерспутник&quot; (РСИ)</title>
+<script LANGUAGE="JavaScript" type="text/javascript">
+<!--
+ var atext = new Array (14)
+ var but = new Array (14)
+ var alt = new Array (14)
+ 
+ atext[0] = "О компании";
+ atext[1] = "Технические средства";
+ atext[2] = "Услуги";
+ atext[3] = "Новости";
+ atext[4] = "Контакты";
+
+ atext[5] = "Космический сегмент";
+ atext[6] = "Горизонт";
+ atext[7] = "Галс";
+ atext[8] = "Экспресс";
+ atext[9] = "Экспресс-А";
+ atext[10] = "LMI";
+ atext[11] = "Сесат";
+ atext[12] = "Зоны обслуживани\я";
+ atext[13] = "Земной сегмент";
+ atext[14] = "Земные станции";
+ atext[15] = "Контрольные станции";
+ atext[16] = "Техническа\я документаци\я";
+ atext[17] = "РСИ";
+ atext[18] = "ПТЭ";
+ atext[19] = "Кто на спутнике";
+
+ var browserVer=0
+ if (navigator.userAgent.indexOf("Mozilla/3.0") != -1) browserVer = 3;
+ else if (navigator.userAgent.indexOf("Mozilla/4.5") != -1) browserVer = 4;
+ else if (navigator.userAgent.indexOf("Mozilla/4.0") != -1) browserVer = 4;
+ else if (navigator.userAgent.indexOf("MSIE") != -1) browserVer = 1;
+ else if (navigator.userAgent.indexOf("Mozilla/2.0") != -1) browserVer = 2;
+ else if (navigator.userAgent.indexOf("MSIE/4.0") != -1) browsercheck = 5;
+ else browserVer = 0;
+
+ if (browserVer >= 3 )
+ {
+  but[0] = new Image();
+  but[1] = new Image();
+  but[2] = new Image();
+  but[3] = new Image();
+  but[4] = new Image();
+
+  but[5] = new Image();
+  but[6] = new Image();
+  but[7] = new Image();
+  but[8] = new Image();
+  but[9] = new Image();
+  but[10] = new Image();
+  but[11] = new Image();
+  but[12] = new Image();
+  but[13] = new Image();
+  but[14] = new Image();
+  but[15] = new Image();
+  but[16] = new Image();
+  but[17] = new Image();
+  but[18] = new Image();
+  but[19] = new Image();
+
+  but[0].src = "images/2/1.gif";
+  but[1].src = "images/2/2.gif";
+  but[2].src = "images/2/3.gif";
+  but[3].src = "images/2/4.gif";
+  but[4].src = "images/2/5.gif";
+
+  but[5].src = "images/2/8.gif";
+  but[6].src = "images/2/9.gif";
+  but[7].src = "images/2/10.gif";
+  but[8].src = "images/2/11.gif";
+  but[9].src = "images/2/12.gif";
+  but[10].src = "images/2/13.gif";
+  but[11].src = "images/2/14.gif";
+  but[12].src = "images/2/15.gif";
+  but[13].src = "images/2/16.gif";
+  but[14].src = "images/2/17.gif";
+  but[15].src = "images/2/18.gif";
+  but[16].src = "images/2/119.gif";
+  but[17].src = "images/2/120.gif";
+  but[18].src = "images/2/121.gif";
+  but[19].src = "images/2/122.gif";
+  
+
+  alt[0] = new Image();
+  alt[1] = new Image();
+  alt[2] = new Image();
+  alt[3] = new Image();
+  alt[4] = new Image();
+ 
+  alt[5] = new Image();
+  alt[6] = new Image();
+  alt[7] = new Image();
+  alt[8] = new Image();
+  alt[9] = new Image();
+  alt[10] = new Image();
+  alt[11] = new Image();
+  alt[12] = new Image();
+  alt[13] = new Image();
+  alt[14] = new Image();
+  alt[15] = new Image();
+  alt[16] = new Image();
+  alt[17] = new Image();
+  alt[18] = new Image();
+  alt[19] = new Image();
+
+  alt[0].src = "images/1/1a.gif";
+  alt[1].src = "images/1/2a.gif";
+  alt[2].src = "images/1/3a.gif";
+  alt[3].src = "images/1/4a.gif";
+  alt[4].src = "images/1/5a.gif";
+
+  alt[5].src = "images/2/8a.gif";
+  alt[6].src = "images/2/9a.gif";
+  alt[7].src = "images/2/10a.gif";
+  alt[8].src = "images/2/11a.gif";
+  alt[9].src = "images/2/12a.gif";
+  alt[10].src = "images/2/13a.gif";
+  alt[11].src = "images/2/14a.gif";
+  alt[12].src = "images/2/15a.gif";
+  alt[13].src = "images/2/16a.gif";
+  alt[14].src = "images/2/17a.gif";
+  alt[15].src = "images/2/18a.gif";
+  alt[16].src = "images/2/119a.gif";
+  alt[17].src = "images/2/120a.gif";
+  alt[18].src = "images/2/121a.gif";
+  alt[19].src = "images/2/122a.gif";
+}
+
+function release(num)
+{
+   if (browserVer >= 3)
+   {
+	 	var but_obj = eval("document.button" + num);
+		but_obj.src = but[num].src;
+   }
+   self.status="Welcome to Intersputnik!!!";
+   return true;
+}
+
+function press(num)
+{
+    if (browserVer >=3)
+    {
+	 	var but_obj = eval("document.button" + num);
+		but_obj.src = alt[num].src;
+    }
+	self.status=atext[num];
+	return true;
+}
+//-->
+</script>
+</head>
+<body bgcolor="#ffffff" text="#004080" link="#0000FF" vlink="#0000FF" alink="#FF0000">
+<basefont face="Arial">
+<STYLE TYPE="text/css">
+<!--
+   A:link {color:blue;text-decoration: underline;}
+   A:visited {color:"#6633AA";}
+   A:hover {color:red;/*font-weight: bold;*/}
+-->
+</STYLE>
+
+<table border="0" align="top" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF"
+width="635">
+  <tr>
+    <td colspan="3" bgcolor="#FFFFFF" nowrap><a href="company.shtml" onmouseout="release(0)"
+    onmouseover="press(0)"><img name="button0" src="images/2/1.gif"
+    alt="[О компании]" align="top" border="0" WIDTH="79" HEIGHT="24"></a><a
+    href="techfacilities.shtml" onmouseout="release(1)" onmouseover="press(1)"><img
+    name="button1" src="images/2/2.gif" alt="[Технические средства]"
+    align="top" border="0" WIDTH="134" HEIGHT="24"></a><a href="services.shtml"
+    onmouseout="release(2)" onmouseover="press(2)"><img name="button2" src="images/2/3.gif"
+    alt="[Услуги]" align="top" border="0" WIDTH="48" HEIGHT="24"></a><a
+    href="news.shtml" onmouseout="release(3)" onmouseover="press(3)"><img name="button3"
+    src="images/2/4.gif" alt="[Новости и события]" align="top" border="0"
+    WIDTH="119" HEIGHT="24"></a><a href="contactus.shtml" onmouseout="release(4)"
+    onmouseover="press(4)"><img name="button4" src="images/2/5.gif" alt="[Контакты]"
+    align="top" border="0" WIDTH="63" HEIGHT="24"></a><img src="images/2/6.gif"
+    alt="Технические средства" WIDTH="192" HEIGHT="24" align="top"></td>
+  </tr>
+  <tr>
+    <td WIDTH="136" valign="top" bgcolor="#93bdda"><img src="images/2/7.jpg" alt="" WIDTH="136" HEIGHT="149"><br><a
+ href="spacesegment.shtml" onmouseout="release(5)" onmouseover="press(5)"><img name="button5"
+    src="images/2/8.gif" alt="[Космический сегмент]" border="0" WIDTH="136" HEIGHT="34"></a><br><a
+ href="gorizont.shtml" onmouseout="release(6)" onmouseover="press(6)"><img name="button6"
+    src="images/2/9.gif" alt="[Горизонт]" border="0" WIDTH="96" HEIGHT="15"></a><a
+ href="gals.shtml" onmouseout="release(7)" onmouseover="press(7)"><img name="button7"
+    src="images/2/10.gif" alt="[Галс]" border="0" WIDTH="40" HEIGHT="15"></a><br><a
+ href="express.shtml" onmouseout="release(8)" onmouseover="press(8)"><img name="button8"
+    src="images/2/11.gif" alt="[Экспресс]" border="0" WIDTH="136" HEIGHT="15"></a><br><a
+ href="expressa.shtml" onmouseout="release(9)" onmouseover="press(9)"><img name="button9"
+    src="images/2/12.gif" alt="[Экспресс-А]" border="0" WIDTH="136" HEIGHT="13"></a><br><a
+ href="lmi1.shtml" onmouseout="release(10)" onmouseover="press(10)"><img name="button10"
+    src="images/2/13.gif" alt="[LMI]" border="0" WIDTH="90" HEIGHT="17"></a><a
+ href="sesat.shtml" onmouseout="release(11)" onmouseover="press(11)"><img
+    name="button11" src="images/2/14.gif" alt="[Сесат]" border="0" WIDTH="46" HEIGHT="17"></a><br><a
+ href="zones.shtml" onmouseout="release(12)" onmouseover="press(12)"><img name="button12"
+    src="images/2/15.gif" alt="[Зоны Обслуживания]" border="0" WIDTH="136" HEIGHT="17"></a><br><a
+ onmouseout="release(13)" onmouseover="press(13)" href="earthsegment.shtml"><img name="button13"
+    src="images/2/16.gif" alt="[Земной сегмент]" border="0" WIDTH="136" HEIGHT="32"></a><br><a
+ onmouseout="release(14)" onmouseover="press(14)" href="earthstations.shtml"><img name="button14"
+    src="images/2/17.gif" alt="[Земные станции]" border="0" WIDTH="136" HEIGHT="16"></a><br><a
+ onmouseout="release(15)" onmouseover="press(15)" href="controlstation.shtml"><img name="button15"
+    src="images/2/18.gif" alt="[Контрольные станции]" border="0" WIDTH="136" HEIGHT="14"></a><br><a
+ onmouseout="release(16)" onmouseover="press(16)" href="techdocs.shtml"><img name="button16"
+    src="images/2/119.gif" alt="[Техническая документация]" border="0" WIDTH="136" HEIGHT="46"></a><br><a
+ onmouseout="release(17)" onmouseover="press(17)" href="rsi.shtml"><img name="button17"
+    src="images/2/120.gif" alt="[РСИ]" border="0" WIDTH="136" HEIGHT="12"></a><br><a
+ onmouseout="release(18)" onmouseover="press(18)" href="pte.shtml"><img name="button18"
+    src="images/2/121.gif" alt="[ПТЭ]" border="0" WIDTH="136" HEIGHT="13"></a><br><a
+ onmouseout="release(19)" onmouseover="press(19)" href="users.shtml"><img name="button19"
+    src="images/2/122.gif" alt="[Кто на спутнике]" border="0" WIDTH="136" HEIGHT="35"></a>
+</td>
+    <td valign="top" rowspan="2" WIDTH="17"><img src="images/all/c3.gif" alt="" align="top" border="0"
+    WIDTH="17" HEIGHT="53"><br>
+    <img src="images/all/c5.gif" width="17" height="96" alt="" align="top"><br>
+    <img src="images/2/line.gif" alt="" WIDTH="17" HEIGHT="257"></td>
+    <td WIDTH="482" valign="top" nowrap rowspan="2"><img src="images/all/c2.gif" width="290" height="23"
+    alt="" align="top" border="0"><a href="index.htm"><img src="images/all/1b.gif" alt="" align="top" border="0"
+    WIDTH="192" HEIGHT="41"></a><div align="center"><center><table border="0" width="478">
+  <tr>
+     <td>
+
+
+<p>&nbsp;</p>
+<h3>Регламент системы &quot;Интерспутник&quot; (РСИ)</h3>
+<p align=center><font size=2><a href="download_man.shtml">Как получить документацию</a></font></p>
+
+<div align="center"><center>
+<table border="1" width="90%" cellspacing="0" cellpadding="2" bgcolor="#75B8E9"
+bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF">
+  <tr bgcolor="#002050">
+    <td align="center"><font color="#FFFFFF" size="2"><strong>РСИ</strong></font></td>
+    <td align="center"><font color="#FFFFFF" size="2"><strong>Название</strong></font></td>
+    <td align="center"><font color="#FFFFFF" size="2"><strong>Формат</strong></font></td>
+    <td align="center"><font color="#FFFFFF" size="2"><strong>Количество страниц</strong></font></td>
+    <td align="center"><font color="#FFFFFF" size="2"><strong>Дата ввода в действие</strong></font></td>
+    <td align="center"><font color="#FFFFFF" size="2"><strong>Примечание</strong></font></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="6"><font size="2"><b>Группа 100 Введение</b></font></td>
+  </tr>
+  <tr bgcolor="#A0CFEF">
+    <td align="center"><font size="2">101</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-101.exe"><font size="2">Введение</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">4</font></td>
+    <td><font size="2">01.01.96</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center"><font size="2">102</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-102.exe"><font size="2">Терминология</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">8</font></td>
+    <td><font size="2">01.01.94</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#A0CFEF">
+    <td align="center"><font size="2">103</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-103.exe"><font size="2">Информация об
+    организации &quot;Интерспутник&quot;</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">9</font></td>
+    <td><font size="2">01.01.94</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center"><font size="2">104</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-104.exe"><font size="2">Информация о системе
+    &quot;Интерспутник&quot;</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">4</font></td>
+    <td><font size="2">01.01.94</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#A0CFEF">
+    <td align="center"><font size="2">105</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-105.exe"><font size="2">Рекомендации
+    пользователям при создании ЗС</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">4</font></td>
+    <td><font size="2">01.01.94</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center"><font size="2"><a name="106"></a>106</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-106.exe"><font size="2">Порядок расчетов за
+    аренду емкостей спутников</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">17</font></td>
+    <td><font size="2">01.01.95</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#A0CFEF">
+    <td align="center">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" colspan="6"><font size="2"><b>Группа 200 Космический сегмент</b></font></td>
+  </tr>
+  <tr bgcolor="#A0CFEF">
+    <td align="center"><font size="2">201</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-201.exe"><font size="2">ИСЗ &quot;Горизонт&quot;</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">6</font></td>
+    <td><font size="2">01.01.94</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center"><font size="2">202</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-202.exe"><font size="2">ИСЗ &quot;Экспресс&quot;</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">20</font></td>
+    <td><font size="2">01.01.96</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#A0CFEF">
+    <td align="center"><font size="2">203</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-203.exe"><font size="2">ИСЗ &quot;Галс&quot;</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">12</font></td>
+    <td><font size="2">01.01.97</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center"><font size="2">204</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-204.exe"><font size="2">ИСЗ &quot;LMI-1&quot;</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">13</font></td>
+    <td><font size="2">01.01.97</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#A0CFEF">
+    <td align="center"><font size="2">205</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-205.exe"><font size="2">ИСЗ &quot;Экспресс-А&quot;</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">22</font></td>
+    <td><font size="2">01.12.99</font></td>
+    <td><font size="2">Планируется</font></td>
+  </tr>
+  <tr>
+    <td align="center"><font size="2">210</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-210.exe"><font size="2">Порядок предоставления
+    и использования емкостей спутников</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">5</font></td>
+    <td><font size="2">01.12.97</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#A0CFEF">
+    <td align="center">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" colspan="6"><font size="2"><b>Группа 300 Стандарты и
+    характеристики
+    оборудования земных станций</b></font></td>
+  </tr>
+  <tr bgcolor="#A0CFEF">
+    <td align="center"><font size="2"><a name="301"></a>301</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-301.exe"><font size="2">Стандарты земных
+    станций</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">4</font></td>
+    <td><font size="2">01.01.94</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center"><font size="2"><a name="302"></a>302</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-302.exe"><font size="2">Стандарт &quot;С&quot;</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">9</font></td>
+    <td><font size="2">01.01.94</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#A0CFEF">
+    <td align="center"><font size="2"><a name="303"></a>303</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-303.exe"><font size="2">Стандарт &quot;К&quot;</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">8</font></td>
+    <td><font size="2">01.01.96</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center"><font size="2">304</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-304.exe"><font size="2">ЭИИМ земных станций</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">5</font></td>
+    <td><font size="2">01.01.97</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#A0CFEF">
+    <td align="center"><font size="2">305</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-305.exe"><font size="2">Наведение антенн ЗС</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">15</font></td>
+    <td><font size="2">01.01.97</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#A0CFEF">
+    <td align="center" colspan="6"><font size="2"><b>Группа 400 Технические характеристики сигналов</b></font></td>
+  </tr>
+  <tr>
+    <td align="center"><font size="2">401</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-401.exe"><font size="2">Служебная связь</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">7</font></td>
+    <td><font size="2">01.01.96</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#A0CFEF">
+    <td align="center"><font size="2">402</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-402.exe"><font size="2">ТВ/ЧМ</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">9</font></td>
+    <td><font size="2">01.01.94</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center"><font size="2">403</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-403.exe"><font size="2">SCPC-QPSK-PCM</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">6</font></td>
+    <td><font size="2">01.01.94</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#A0CFEF">
+    <td align="center"><font size="2">404</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-404.exe"><font size="2">QPSK/IDR</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">26</font></td>
+    <td><font size="2">01.01.95</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center"><font size="2">405</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-405.exe"><font size="2">QPSK/IBS</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">72</font></td>
+    <td><font size="2">01.01.95</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#A0CFEF">
+    <td align="center"><font size="2">406</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-406.exe"><font size="2">Цифровое ТВ</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">01.12.99</font></td>
+    <td><font size="2">Планируется</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#A0CFEF">
+    <td align="center" colspan="6"><font size="2"><b>Группа 500 Стандарты и параметры земных станций
+    сетей типа VSAT</b></font></td>
+  </tr>
+  <tr>
+    <td align="center"><font size="2">501</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-501.exe"><font size="2">Стандарты ЗС типа VSAT</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">4</font></td>
+    <td><font size="2">01.12.98</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#A0CFEF">
+    <td align="center"><font size="2">502</font></td>
+    <td><p align="left"><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-502.exe"><font size="2">Стандарт VC</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">13</font></td>
+    <td><font size="2">01.12.98</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center"><font size="2">503</font></td>
+    <td><a href="ftp://ftp.algosoft.ru/intersputnik/rus/rsi-503.exe"><font size="2">Стандарт VK</font></a></td>
+    <td><font size="2">Word</font></td>
+    <td><font size="2">13</font></td>
+    <td><font size="2">01.12.98</font></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</center></div>
+
+<p ALIGN="CENTER">&nbsp;</td></tr>
+    </table>
+    </center></div></td>
+  </tr>
+  <tr>
+    <td valign="bottom" align="center" bgcolor="#93bdda"><p><font color="#002050" size="1">©1999 Intersputnik<br>
+    Tel: (7 095) 244-0333<br>
+    Fax: (7 095) 253-9906<br>
+    Design by <a  target="_blank" href="http://www.algosoft.ru">Algosoft</a></font></p>
+    <p>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="3" nowrap><a href="index.htm"><img src="images/all/3.gif" alt="[Home]"
+    border="0" WIDTH="91" HEIGHT="22"></a><a href="sendmessage.shtml"><img
+    src="images/all/4.gif" alt="[E-mail]" border="0" WIDTH="93" HEIGHT="22"></a><a
+    href="search.shtml"><img src="images/all/5.gif" alt="[Поиск]" border="0" WIDTH="84"
+    HEIGHT="22"></a><a href="links.shtml"><img src="images/all/6.gif" alt="[Ссылки]"
+    border="0" WIDTH="85" HEIGHT="22"></a><img src="images/all/c4.gif" width="50" height="22"
+    alt=""><img src="images/2/19.gif" alt="" WIDTH="97"
+    HEIGHT="22"><img src="images/2/c1.gif" width="73" height="22" alt=""><empty
+><a href="techdocs.shtml"><img src="images/2/left.gif" alt="[prev]" border="0" width="31" height="22"></a><a href="pte.shtml"><img src="images/2/right.gif"
+alt="[ next ]" border="0" WIDTH="31" HEIGHT="22"></a><br><div align="center"><font size="2">[ <a href="spacesegment.shtml">Космический
+    сегмент</a> | <a href="earthsegment.shtml">Земной
+    сегмент</a> | <a href="techdocs.shtml">Техническая документация</a> ]
+      </font></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html> </p>
+</body>
+</html>

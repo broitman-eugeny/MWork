@@ -1,0 +1,717 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<!-- saved from url=(0033)http://learn.javascript.ru/bezier -->
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" version="XHTML+RDFa 1.0" dir="ltr" class="js"><head profile="http://www.w3.org/1999/xhtml/vocab"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Кривые Безье   Учебник JavaScript_files/cb=gapi.loaded_1" async=""></script><script src="./Кривые Безье   Учебник JavaScript_files/cb=gapi.loaded_0" async=""></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="webmoney.attestation.label" content="webmoney attestation label#40DF25E3-33CE-4524-8E7D-149B6AFD6BC1">
+
+<link rel="next" href="http://learn.javascript.ru/css-animation">
+<link rel="shortcut icon" href="http://learn.javascript.ru/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="up" href="http://learn.javascript.ru/animation">
+<link rel="shortlink" href="http://learn.javascript.ru/node/448">
+<meta name="Generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="./Кривые Безье   Учебник JavaScript_files/Кривые Безье   Учебник JavaScript.html">
+<link rel="prev" href="http://learn.javascript.ru/js-animation">
+<title>Кривые Безье | Учебник JavaScript</title>
+<meta property="og:title" content="">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/bezier">
+<meta property="og:site_name" content="JavaScript.ru">
+<meta property="fb:admins" content="100001562528165">
+<script type="text/javascript" async="" src="./Кривые Безье   Учебник JavaScript_files/watch.js"></script><script id="facebook-jssdk" src="./Кривые Безье   Учебник JavaScript_files/all.js"></script><script src="./Кривые Безье   Учебник JavaScript_files/ga.js"></script><script id="gplus" async="" src="./Кривые Безье   Учебник JavaScript_files/plusone.js" gapi_processed="true"></script><script id="twitter-wjs" src="./Кривые Безье   Учебник JavaScript_files/widgets.js"></script><script>if (window.devicePixelRatio > 1) document.cookie='hires=1; path=/';
+  </script>
+<link type="text/css" rel="stylesheet" href="./Кривые Безье   Учебник JavaScript_files/css_YdZ6xMIwz9gPqD5-E8WQdyWoJ_KvpYB6fYwgzEJOwhU.css" media="all">
+<script type="text/javascript" src="./Кривые Безье   Учебник JavaScript_files/js_ueAxrOk49OcCSfE3A8Vu1RpxLGXgHTGXx0XiNbquH4U.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+$ = jQuery;
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+  SyntaxHighlighter.config.clipboardSwf = '/modules/syntaxhighlighter/clipboard.swf';
+  $(function() {
+    SyntaxHighlighter.highlight();
+    })
+  
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"analytic","theme_token":"vMwHCmCQ22COvzT3-jC9j-9ikayqdMGw-kfrQVjSaLQ","js":{"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.9\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"public:\/\/languages\/ru_9dlpwq9NGc9ma765uWKT7X6nspvGsev0NJuQXawFIuI.js":1,"modules\/dhtml_menu\/dhtml_menu.js":1,"modules\/editor\/user.js":1,"modules\/editor\/hotkeys.js":1,"modules\/mistype\/mistype.js":1,"modules\/myfilter\/myfilter.js":1,"modules\/mytheme\/misc.js":1,"modules\/myutils\/jquery.cookie.js":1,"modules\/myutils\/jquery.alerts.js":1,"modules\/myutils\/jquery-migrate-1.1.1.js":1,"modules\/myutils\/misc.js":1,"files\/tutorial\/js\/dom.js":1,"files\/tutorial\/js\/misc.js":1,"files\/tutorial\/js\/lodash.js":1,"modules\/syntaxhighlighter\/sh\/scripts\/shCore.js":1,"modules\/syntaxhighlighter\/sh\/scripts\/shBrushCss.js":1,"modules\/syntaxhighlighter\/sh\/scripts\/shBrushJava.js":1,"modules\/syntaxhighlighter\/sh\/scripts\/shBrushJScript.js":1,"modules\/syntaxhighlighter\/sh\/scripts\/shBrushPhp.js":1,"modules\/syntaxhighlighter\/sh\/scripts\/shBrushPlain.js":1,"modules\/syntaxhighlighter\/sh\/scripts\/shBrushXml.js":1,"modules\/disqus\/disqus.js":1,"0":1,"1":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/simplenews\/simplenews.css":1,"modules\/book\/book.css":1,"modules\/comment\/comment.css":1,"modules\/date\/date_api\/date.css":1,"modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"modules\/forum\/forum.css":1,"modules\/views\/css\/views.css":1,"modules\/ctools\/css\/ctools.css":1,"modules\/dhtml_menu\/dhtml_menu.css":1,"modules\/myutils\/jquery.alerts.css":1,"modules\/myutils\/misc.css":1,"modules\/syntaxhighlighter\/sh\/styles\/shCore.css":1,"modules\/syntaxhighlighter\/sh\/styles\/shThemeDefault.css":1,"themes\/analytic\/style.css":1,"themes\/analytic\/local.css":1,"themes\/analytic\/linkindication.css":1}},"dhtmlMenu":{"nav":"none","animation":{"effects":{"height":"height","opacity":"opacity","width":0},"speed":"500"},"effects":{"siblings":"close-same-tree","children":"none","remember":"0"},"filter":{"type":"blacklist","list":{"book-toc-246":0,"book-toc-297":0,"book-toc-511":0,"book-toc-67":0,"main-menu":0,"management":0,"navigation":0,"shortcut-set-1":0,"user-menu":0}}},"disqus":{"domain":"learnjavascriptru","url":"http:\/\/learn.javascript.ru\/bezier","title":"\u041a\u0440\u0438\u0432\u044b\u0435 \u0411\u0435\u0437\u044c\u0435","identifier":"node\/448"}});
+//--><!]]>
+</script>
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style><script src="./Кривые Безье   Учебник JavaScript_files/alfie.f51946af45e0b561c60f768335c9eb79.js" async="" charset="UTF-8"></script></head>
+<body id="body" class="html not-front not-logged-in no-sidebars page-node page-node- page-node-448 node-type-book disqus-processed" data-twttr-rendered="true">
+<iframe name="resizer" src="./Кривые Безье   Учебник JavaScript_files/iframe-resize.html" style="display:none"></iframe>
+<div class="make-it-center">
+<div class="rws-primary-menu clearfix">
+<ul class="links primary-links">
+<li>
+<a href="http://javascript.ru/">JavaScript.ru</a>
+</li>
+<li><a href="http://learn.javascript.ru/">Учебник</a></li>
+<li><a href="http://learn.javascript.ru/play">Песочница</a></li>
+<li><a href="http://es5.javascript.ru/">Спецификация ES5</a></li>
+<li><a href="http://javascript.ru/forum">Форум</a></li>
+<li><a href="http://learn.javascript.ru/chat">Чат</a></li>
+<li><a href="http://javascript.ru/courses">Курсы</a></li>
+<li style="float:right"><form action="./Кривые Безье   Учебник JavaScript_files/Кривые Безье   Учебник JavaScript.html" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline" style="margin-top:12px">
+<input type="text" maxlength="128" placeholder=" Найти" name="search_block_form" id="edit-search-block-form-1" value="" class="form-text"><input type="image" style="background:inherit;border:none;height:17px;padding:0;margin:0 5px 0 3px" src="./Кривые Безье   Учебник JavaScript_files/gray-arrow-right.png" name="op" id="edit-submit-button" value="" class="form-submit">
+<input type="hidden" name="form_build_id" id="MmgyQqtAnfcZHpdrswIM1NwsmWnEMuEviGeW0VqBpao" value="MmgyQqtAnfcZHpdrswIM1NwsmWnEMuEviGeW0VqBpao">
+<input type="hidden" name="form_token" id="edit-search-block-form-form-token" value="vCvdsfVL0bsz_gf7wgaSQrpbeXxTqFnQPctB9JQ5DqI">
+<input type="hidden" name="form_id" id="edit-search-block-form" value="search_block_form">
+</div>
+</div></form></li>
+</ul>
+</div>
+<div id="content-toggler" class="content-toggler">
+<span class="content-toggler-hide">Содержание (скрыть)</span>
+<span class="content-toggler-show">Содержание (показать)</span>
+</div>
+<ul class="sec-list" id="submenu-info">
+<li class="sec-item"><a href="http://javascript.ru/manual">Справочник</a></li>
+<li class="sec-item"><a href="http://learn.javascript.ru/user">Вход на сайт</a></li>
+<li class="sec-item"><a href="http://learn.javascript.ru/nodejs-screencast">Скринкаст по Node.JS</a></li>
+<li class="sec-item"><a href="http://learn.javascript.ru/about">О сайте</a></li>
+</ul>
+ 
+ 
+<div class="column-wrapper">
+ <div class="column-2 
+no-left-column
+">
+ 
+ 
+<h2 class="element-invisible">Вы здесь</h2><div class="breadcrumb"><a href="http://javascript.ru/">Главная</a> » <a href="http://learn.javascript.ru/tutorial">Учебник</a> » <a href="http://learn.javascript.ru/animation">Анимация</a></div>
+<div class="book-navigation book-navigation-upper" id="book-navigation-448">
+<div class="page-links clearfix">
+<a title="Go to previous page" class="page-previous" href="http://learn.javascript.ru/js-animation">‹ JS-Анимация </a>
+<a title="Go to next page" class="page-next" href="http://learn.javascript.ru/css-animation">CSS-анимация ›</a>
+</div>
+</div>
+<h1 class="title">Кривые Безье</h1>
+ <div class="main-content-block">
+<div class="region region-content">
+<div class="block block-open 
+  block-system clearfix" id="block-system-main">
+<div class="content clearfix">
+<div oncanplay="1" class="clearfix node node-nid-448  node-book node node-book ">
+<ol class="toc-full">
+<li><a href="http://learn.javascript.ru/bezier#виды-кривых-безье">Виды кривых Безье</a></li>
+<li><a href="http://learn.javascript.ru/bezier#математика">Математика</a></li>
+<li><a href="http://learn.javascript.ru/bezier#рисование-де-кастельжо">Рисование «де Кастельжо»</a></li>
+<li><a href="http://learn.javascript.ru/bezier#итого">Итого</a></li></ol>
+<div class="content clearfix ">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"> <p>Кривые Безье используются в компьютерной графике для рисования плавных изгибов, в <a href="http://learn.javascript.ru/css-animation#css-animation">CSS-анимации</a> для описания процесса анимации и много где ещё.</p>
+<p>Тему эту стоит изучить, чтобы в дальнейшем с комфортом пользоваться этим замечательным инструментом.<br> </p>
+<script>
+if (!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1")) {
+ document.write('<h2 style="color:red">Ваш браузер не поддерживает SVG. Живые примеры без него не работают :(</h2>');
+}
+</script>
+<h2><a name="виды-кривых-безье" href="http://learn.javascript.ru/bezier#виды-кривых-безье" id="виды-кривых-безье">Виды кривых Безье</a></h2>
+<p><strong><a href="http://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D0%B2%D0%B0%D1%8F_%D0%91%D0%B5%D0%B7%D1%8C%D0%B5">Кривая Безье</a> задаётся опорными точками.</strong></p>
+<p>Их может быть две, три, четыре или больше. Например:</p>
+<table><tbody><tr><th>По двум точкам</th>
+<th>По трём точкам</th>
+<th>По четырём точкам</th>
+</tr><tr><td>
+<img src="./Кривые Безье   Учебник JavaScript_files/bezier2.png" width="113" height="124">
+</td>
+<td>
+<img src="./Кривые Безье   Учебник JavaScript_files/bezier3.png" width="113" height="124">
+</td>
+<td>
+<img src="./Кривые Безье   Учебник JavaScript_files/bezier4.png" width="113" height="124">
+</td>
+</tr></tbody></table><p>Если вы посмотрите внимательно на эти кривые, то «на глазок» заметите: </p>
+<ol><li><strong>Степень кривой равна числу точек минус один</strong>.<br>
+На рисунках выше, соответственно, получаются для двух точек — линейная кривая (прямая), для трёх точек — квадратическая кривая (парабола), для четырёх — кубическая.</li>
+<li><strong>Кривая всегда находится внутри <a href="http://ru.wikipedia.org/wiki/%D0%92%D1%8B%D0%BF%D1%83%D0%BA%D0%BB%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D0%B0">выпуклой оболочки</a>, образованной опорными точками:</strong>
+<p><img src="./Кривые Безье   Учебник JavaScript_files/bezier4-e.png" width="113" height="124"> <img src="./Кривые Безье   Учебник JavaScript_files/bezier3-e.png" width="113" height="124"></p>
+<p>Благодаря последнему свойству в компьютерной графике можно оптимизировать проверку пересечений двух кривых. Если их выпуклые оболочки не пересекаются, то и кривые тоже не пересекутся.
+</p></li>
+</ol><p>Основная ценность кривых Безье — в том, что <strong>кривую можно менять, двигая точки</strong>. При этом <strong>кривая меняется интуитивно понятным образом</strong>.</p>
+<p>Попробуйте двигать точки мышью в примере ниже:</p>
+<p><iframe frameborder="0" name="ifr-54db00686337e" style="width:100%;height:370px;border:none;-moz-box-sizing:border-box;box-sizing:border-box" src="./Кривые Безье   Учебник JavaScript_files/demo.html"></iframe></p>
+<p>Как можно заметить, <strong>кривая натянута по касательным 1 → 2 и 3 → 4.</strong></p>
+<p>После небольшой практики становится понятно, как расположить точки, чтобы получить нужную форму. А, соединяя несколько кривых, можно получить практически что угодно.</p>
+<p>Вот некоторые примеры:</p>
+<p><img src="./Кривые Безье   Учебник JavaScript_files/car.jpg" width="264" height="136"> <img src="./Кривые Безье   Учебник JavaScript_files/letter_m.png" width="220" height="147"> <img src="./Кривые Безье   Учебник JavaScript_files/vase.png" width="106" height="166"></p>
+<h2><a name="математика" href="http://learn.javascript.ru/bezier#математика" id="математика">Математика</a></h2>
+<p>У кривых Безье есть математическая формула. Как мы увидим далее, в ней нет особенной необходимости, но для полноты картины — вот она.</p>
+<p><strong>Координаты кривой описываются в зависимости от параметра <code>t⋲[0,1]</code></strong></p>
+<ul><li>Для двух точек:
+<p><code>P = (1-t)P<sub>1</sub> + tP<sub>2</sub></code>
+</p></li>
+<li>Для трёх точек:
+<p><code>P = (1−t)<sup>2</sup>P<sub>1</sub> + 2(1−t)tP<sub>2</sub> + t<sup>2</sup>P<sub>3</sub></code>
+</p></li>
+<li>Для четырёх точек:
+<p><code>P = (1−t)<sup>3</sup>P<sub>1</sub> + 3(1−t)<sup>2</sup>tP<sub>2</sub> +3(1−t)t<sup>2</sup>P<sub>3</sub> + t<sup>3</sup>P<sub>4</sub></code>
+</p></li>
+</ul><p>Эти уравнения — векторные, т.е. вместо <code>P<sub>i</sub></code> нужно подставить координаты i-й опорной точки <code>(x<sub>i</sub>, y<sub>i</sub>).</code></p>
+<p>Формула даёт возможность строить кривые, но не очень понятно, почему они именно такие, и как зависят от опорных точек. С этим нам поможет разобраться другой алгоритм.</p>
+<h2><a name="рисование-де-кастельжо" href="http://learn.javascript.ru/bezier#рисование-де-кастельжо" id="рисование-де-кастельжо">Рисование «де Кастельжо»</a></h2>
+<p><a href="http://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%B4%D0%B5_%D0%9A%D0%B0%D1%81%D1%82%D0%B5%D0%BB%D1%8C%D0%B6%D0%BE">Метод де Кастельжо</a> идентичен математическому определению кривой и наглядно показывает, как она строится.</p>
+<p>Посмотрим его на примере трех точек (точки можно двигать). Нажатие на кнопку "Play" запустит демонстрацию. </p>
+<p><iframe frameborder="0" name="ifr-54db00686379b" style="width:100%;height:370px;border:none;-moz-box-sizing:border-box;box-sizing:border-box" src="./Кривые Безье   Учебник JavaScript_files/demo(3).html"></iframe></p>
+<p><strong>Алгоритм построения "де Кастельжо":</strong></p>
+<ol><li>Строятся отрезки между опорными точками 1-2-3. На рисунке выше они <strong>чёрные</strong>.</li>
+<li>Параметр <code>t</code> пробегает значения от <code>0</code> до <code>1</code>. В примере выше использован шаг <code>0.05</code>, т.е. в цикле <code>0, 0.05, 0.1, 0.15, ... 0.95, 1</code>.
+<p>Для каждого значения <code>t</code>:</p>
+<ol><li>На каждом из этих отрезков берётся точка, находящаяся от начала на расстоянии от 0 до <code>t</code> пропорционально длине. То есть, при <code>t=0</code> — точка будет в начале, при <code>t=0.25</code> — на расстоянии в 25% от начала отрезка, при <code>t=0.5</code> — 50%(на середине), при <code>t=1</code> — в конце. Так как <strong>чёрных</strong> отрезков — два, то и точек выходит две штуки.</li>
+<li>Эти точки соединяются. На рисунке ниже соединяющий их отрезок изображён <span style="color:blue">синим</span>.<br><table class="bordered"><tbody><tr><td>При <code>t=0.25</code></td>
+<td>При <code>t=0.5</code></td>
+</tr><tr><td><img src="./Кривые Безье   Учебник JavaScript_files/bezier3-draw1.png" width="305" height="290"></td>
+<td><img src="./Кривые Безье   Учебник JavaScript_files/bezier3-draw2.png" width="280" height="290"></td>
+</tr></tbody></table></li>
+<li>На <span style="color:blue">получившемся</span> отрезке берётся точка на расстоянии, соответствующем <code>t</code>. То есть, для <code>t=0.25</code> получаем точку в конце первой четверти отрезка, для <code>t=0.5</code> — в середине отрезка. На рисунке выше эта точка отмечена <span style="color:red">красным</span>.
+</li>
+</ol></li>
+<li>
+По мере того как <code>t</code> пробегает последовательность от <code>0</code> до <code>1</code>, каждое значение <code>t</code> добавляет к кривой точку. <strong>Совокупность таких точек для всех значений <code>t</code> образуют кривую Безье.</strong>
+</li>
+</ol><p><strong>Это был процесс для построения по трём точкам. Но то же самое происходит и с четырьмя точками.</strong></p>
+<p>Демо для четырёх точек (точки можно двигать):</p>
+<p><iframe frameborder="0" name="ifr-54db006863a47" style="width:100%;height:370px;border:none;-moz-box-sizing:border-box;box-sizing:border-box" src="./Кривые Безье   Учебник JavaScript_files/demo(2).html"></iframe></p>
+<p>Алгоритм:</p>
+<ul><li>Точки по порядку соединяются отрезками: <code>1-2</code>, <code>2-3</code>, <code>3-4</code>. Получается три чёрных отрезка.</li>
+<li>На отрезках берутся точки, соответствующие текущему <code>t</code>, соединяются. Получается два <span style="color:#0A0">зелёных отрезка</span>.</li>
+<li>На этих отрезках берутся точки, соответствующие текущему <code>t</code>, соединяются. Получается один <span style="color:blue">синий отрезок</span>.</li>
+<li>На синем отрезке берётся точка, соответствующая текущему <code>t</code>. При запуске примера выше она <span style="color:red">красная</span>.</li>
+<li>Эти точки описывают кривую.</li>
+</ul><p>Нажмите на кнопку «play» в примере выше, чтобы увидеть это в действии.</p>
+<p>Ещё примеры кривых:</p>
+<p><iframe frameborder="0" name="ifr-54db006863afa" style="width:100%;height:370px;border:none;-moz-box-sizing:border-box;box-sizing:border-box" src="./Кривые Безье   Учебник JavaScript_files/demo(1).html"></iframe></p>
+<p>С другими точками:</p>
+<p><iframe frameborder="0" name="ifr-54db006863ba6" style="width:100%;height:370px;border:none;-moz-box-sizing:border-box;box-sizing:border-box" src="./Кривые Безье   Учебник JavaScript_files/demo(4).html"></iframe></p>
+<p>Петелька:</p>
+<p><iframe frameborder="0" name="ifr-54db006863c51" style="width:100%;height:370px;border:none;-moz-box-sizing:border-box;box-sizing:border-box" src="./Кривые Безье   Учебник JavaScript_files/demo(5).html"></iframe></p>
+<p>Пример негладкой кривой Безье:</p>
+<p><iframe frameborder="0" name="ifr-54db006863cfa" style="width:100%;height:370px;border:none;-moz-box-sizing:border-box;box-sizing:border-box" src="./Кривые Безье   Учебник JavaScript_files/demo(6).html"></iframe></p>
+<p>Аналогичным образом могут быть построены кривые Безье и более высокого порядка: по пяти точкам, шести и так далее. Но обычно используются 2-3 точки, а для сложных линий несколько кривых соединяются. Это гораздо проще с точки зрения поддержки и расчётов.</p>
+<p></p><div class="smart"><div class="smart-header">Как провести кривую через нужные точки?</div> <p>Этот вопрос не связан с кривыми Безье, но он иногда возникает в смежных задачах.</p>
+<p>Такая задача называется <a href="http://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BF%D0%BE%D0%BB%D1%8F%D1%86%D0%B8%D1%8F">интерполяцией</a>. Существуют математические формулы, которые подбирают коэффициенты кривой по точкам, исходя из требований, например <a href="http://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BF%D0%BE%D0%BB%D1%8F%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D1%87%D0%BB%D0%B5%D0%BD_%D0%9B%D0%B0%D0%B3%D1%80%D0%B0%D0%BD%D0%B6%D0%B0">многочлен Лагранжа</a>. </p>
+<p>Как правило, в компьютерной графике для интерполяции используют кубические кривые, соединённых гладким образом. Вместе они выглядят как одна кривая. Это называется <a href="http://ru.wikipedia.org/wiki/%D0%9A%D1%83%D0%B1%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BF%D0%BB%D0%B0%D0%B9%D0%BD">интерполяция сплайнами</a>.</p>
+</div><p></p>
+<h2><a name="итого" href="http://learn.javascript.ru/bezier#итого" id="итого">Итого</a></h2>
+<p>Кривые Безье задаются опорными точками. Мы рассмотрели два определения кривых:</p>
+<ol><li>Через математическую формулу.</li>
+<li>Через процесс построения де Кастельжо.</li>
+</ol><p>С их помощью можно описать почти любую линию, особенно если соединить несколько.</p>
+<p>Применение:</p>
+<ul><li>В компьютерной графике, моделировании, в графических редакторах. Шрифты описываются с помощью кривых Безье.</li>
+<li>В веб-разработке — для графики на Canvas или в формате SVG. Кстати, все живые примеры выше написаны на SVG. Фактически, это один SVG-документ, к которому точки передаются параметрами. Вы можете открыть его в отдельном окне и посмотреть исходник: <a href="./Кривые Безье   Учебник JavaScript_files/demo(4).html">demo.svg</a>.</li>
+<li>В CSS-анимации, для задания временной функции.</li>
+</ul> </div></div></div>
+<div id="book-navigation-246" class="book-navigation">
+<div class="page-links clearfix">
+<a href="http://learn.javascript.ru/js-animation" class="page-previous" title="На предыдущую страницу">‹ JS-Анимация </a>
+<a title="Go to next page" class="page-next" href="http://learn.javascript.ru/css-animation">CSS-анимация ›</a>
+</div>
+</div>
+<div class="see-also-header">См. также</div><ul class="see-also-links"><li><a href="http://cubic-bezier.com/">Тест-стенд для кривых Безье от Lea Verou</a></li></ul> </div>
+<div class="node-details">
+<div class="submitted">20.12.2011</div>
+<div class="author"><a href="http://ikantor.moikrug.ru/">Илья Кантор</a></div>
+</div>
+<br style="clear:both">
+<div class="footer-share">
+<div style="margin-bottom:-3px">Если статья понравилась — поделитесь ей! Выберите одно или несколько:</div>
+<style>.share-list li{float:left;padding-top:4px;list-style:none;margin:5px;}.share-list{margin:0;padding:0;}</style>
+<ul class="share-list">
+<li>
+<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./Кривые Безье   Учебник JavaScript_files/tweet_button.62da0a34306f5c17db7d290755ed1d7d.ru.html" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-none" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 98px; height: 28px;"></iframe>
+</li>
+<li>
+<script>
+!function(d,s,id){
+  var js,fjs=d.getElementsByTagName(s)[0];
+  if(!d.getElementById(id)){
+    js=d.createElement(s);js.id=id;
+    js.src="http://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js,fjs);
+  }
+}(document,"script","twitter-wjs");
+</script>
+<a href="http://vkontakte.ru/share.php?url=http%3A//learn.javascript.ru/bezier&title=%D0%9A%D1%80%D0%B8%D0%B2%D1%8B%D0%B5%20%D0%91%D0%B5%D0%B7%D1%8C%D0%B5" title="Опубликовать ссылку на статью ВКонтакте" target="_blank" class="vkontakte" style="display:inline-block" onclick="window.open(this.href, &#39;Опубликовать ссылку на пост в Вконтакте&#39;, &#39;width=600,height=300&#39;); return false">Поделиться</a>
+</li>
+<li style="padding:0">
+<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 38px; height: 24px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 38px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1424343105186" name="I0_1424343105186" src="./Кривые Безье   Учебник JavaScript_files/fastbutton(1).html" data-gapiattached="true" title="+1"></iframe></div>
+<script>
+  window.___gcfg = {lang: 'ru'};
+
+  (function() {
+    if (document.getElementById('gplus')) return;
+    var po = document.createElement('script'); po.id = 'gplus'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+
+
+
+</script>
+</li>
+<li>
+<div style="display:inline-block" class="fb-like fb_iframe_widget" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=112959575461438&amp;container_width=0&amp;font=arial&amp;href=http%3A%2F%2Flearn.javascript.ru%2Fbezier&amp;layout=button_count&amp;locale=ru_RU&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=300"><span style="vertical-align: top; width: 0px; height: 0px; overflow: hidden;"><iframe name="f4b7a08b" width="300px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Кривые Безье   Учебник JavaScript_files/saved_resource.html" style="border: none; visibility: visible; width: 0px; height: 0px;"></iframe></span></div>
+</li>
+</ul>
+<br style="clear:both">
+</div>
+<h2>Комментарии</h2>
+<ol>
+<li>Приветствуются комментарии, содержащие дополнения и вопросы по статье, и ответы на них.</li>
+<li>Если ваш комментарий касается задачи – откройте её в отдельном окне и напишите там.</li>
+<li>Для кода внутри строки используйте тег <code>&lt;code&gt;</code>, для блока кода – тег <code>&lt;pre&gt;</code>, если больше 10 строк – ссылку на <a href="http://learn.javascript.ru/play">песочницу</a>.</li>
+<li>Если что-то непонятно – пишите, что именно и с какого места.</li>
+</ol>
+<div id="disqus_thread"><iframe id="dsq-2" data-disqus-uid="2" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Кривые Безье   Учебник JavaScript_files/saved_resource(1).html" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 3150px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe><iframe id="dsq-indicator-north" data-disqus-uid="indicator-north" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 685px !important; border: none !important; overflow: hidden !important; top: 0px !important; min-width: 685px !important; max-width: 685px !important; position: fixed !important; z-index: 2147483646 !important; height: 29px !important; min-height: 29px !important; max-height: 29px !important; display: none !important;"></iframe><iframe id="dsq-indicator-south" data-disqus-uid="indicator-south" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 685px !important; border: none !important; overflow: hidden !important; bottom: 0px !important; min-width: 685px !important; max-width: 685px !important; position: fixed !important; z-index: 2147483646 !important; height: 29px !important; min-height: 29px !important; max-height: 29px !important; display: none !important;"></iframe></div>
+<div style="clear:both"></div>
+</div>
+</div>
+</div>
+</div>
+ </div>
+ 
+<div style="text-align:center"><a href="http://learn.javascript.ru/bezier#body">Наверх</a></div>
+ </div>
+ 
+<script>
+applyRightColumnHidden();
+</script>
+<div class="column-3"> <div class="region region-right">
+<div class="block block-open 
+  block-block clearfix" id="block-block-1">
+<a href="http://learn.javascript.ru/bezier#" class="block-title"><div class="title-toggle">»</div>PDF учебника</a>
+<div class="content clearfix"> <ul><li><a href="http://learn.javascript.ru/content/uchebnik-pdf-dlya-pechati">Для печати: 450р (~7$)</a></li>
+<li><a href="http://learn.javascript.ru/content/uchebnik-pdf-dlya-chteniya-s-ustroystv">Для чтения с устройств: 450р</a></li>
+<li><a href="http://learn.javascript.ru/content/uchebnik-pdf-dlya-chteniya-i-pechati">Оба варианта: 650р (~10$)</a></li>
+</ul> </div>
+</div>
+<div class="block block-open 
+  block-book clearfix" id="block-book-navigation">
+<a href="http://learn.javascript.ru/bezier#" class="block-title"><div class="title-toggle">»</div>Содержание</a>
+<div class="content clearfix"><ul class="menu"><li class="first collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-752"><a href="http://learn.javascript.ru/getting-started">Общая информация</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-407"><a href="http://learn.javascript.ru/intro">Введение в JavaScript</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1135"><a href="http://learn.javascript.ru/alternatives">Альтернативные браузерные технологии</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1317"><a href="http://learn.javascript.ru/books">Книги по JS, HTML/CSS и не только</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-674"><a href="http://learn.javascript.ru/pre-coding">Справочники и спецификации</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1137"><a href="http://learn.javascript.ru/editor">Редакторы для кода</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2635"><a href="http://learn.javascript.ru/sublime">Sublime Text: шпаргалка</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-787"><a href="http://learn.javascript.ru/browsers">Установка браузеров, JS-консоль</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2304"><a href="http://learn.javascript.ru/tools-browsers">Поддержка старых браузеров</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-434"><a href="http://learn.javascript.ru/hello-world">Привет, мир!</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-753"><a href="http://learn.javascript.ru/first-steps">Основы JavaScript</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-1138"><a href="http://learn.javascript.ru/structure">Структура кода</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-435"><a href="http://learn.javascript.ru/variables">Переменные</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2645"><a href="http://learn.javascript.ru/variable-names">Имена переменных</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1656"><a href="http://learn.javascript.ru/types-intro">Введение в типы данных</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-636"><a href="http://learn.javascript.ru/operators">Основные операторы</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-637"><a href="http://learn.javascript.ru/comparison">Операторы сравнения и логические значения</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1494"><a href="http://learn.javascript.ru/bitwise-operators">Побитовые операторы</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-676"><a href="http://learn.javascript.ru/uibasic">Взаимодействие с пользователем: alert, prompt, confirm</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1140"><a href="http://learn.javascript.ru/ifelse">Условные операторы: if, '?'</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1150"><a href="http://learn.javascript.ru/logical-ops">Логические операторы</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-638"><a href="http://learn.javascript.ru/while-for">Циклы while, for</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1151"><a href="http://learn.javascript.ru/break-continue">Директивы break и continue</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1152"><a href="http://learn.javascript.ru/switch">Конструкция switch</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1134"><a href="http://learn.javascript.ru/function-basics">Функции</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1564"><a href="http://learn.javascript.ru/recursion">Рекурсия, стек</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1584"><a href="http://learn.javascript.ru/properties-and-methods">Методы и свойства</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-1655"><a href="http://learn.javascript.ru/javascript-specials">Всё вместе: особенности JavaScript</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-2430"><a href="http://learn.javascript.ru/writing-js">Пишем на JavaScript</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-2640"><a href="http://learn.javascript.ru/strict-mode">Строгий режим, "use strict"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1354"><a href="http://learn.javascript.ru/coding-style">Стиль кода</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1493"><a href="http://learn.javascript.ru/write-unmain-code">Как писать неподдерживаемый код?</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-1653"><a href="http://learn.javascript.ru/debugging-chrome">Отладка в браузере Chrome</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-2431"><a href="http://learn.javascript.ru/data-structures">Структуры данных</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-462"><a href="http://learn.javascript.ru/string">Строки</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-520"><a href="http://learn.javascript.ru/number">Числа</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2643"><a href="http://learn.javascript.ru/types-conversion">Преобразование типов для примитивов</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-522"><a href="http://learn.javascript.ru/object">Объекты как ассоциативные массивы</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-521"><a href="http://learn.javascript.ru/array">Массивы c числовыми индексами</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1562"><a href="http://learn.javascript.ru/array-methods">Массивы: методы</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-722"><a href="http://learn.javascript.ru/datetime">Дата и Время</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-1654"><a href="http://learn.javascript.ru/functions-closures">Функции и замыкания</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-2444"><a href="http://learn.javascript.ru/function-is-value">Функция - это значение</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-504"><a href="http://learn.javascript.ru/function-declaration-expression">Function Declaration и Function Expression</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1235"><a href="http://learn.javascript.ru/named-function-expression">Именованные функциональные выражения </a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2644"><a href="http://learn.javascript.ru/global-object">Глобальный объект</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-523"><a href="http://learn.javascript.ru/closures">Замыкания, функции изнутри</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2429"><a href="http://learn.javascript.ru/closures-usage">Хранение данных в замыкании, модули</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2446"><a href="http://learn.javascript.ru/static-variables">Статические переменные</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-765"><a href="http://learn.javascript.ru/with">Конструкция "with" </a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-2447"><a href="http://learn.javascript.ru/function-arguments">Аргументы функций</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-754"><a href="http://learn.javascript.ru/arguments-pseudoarray">Псевдо-массив arguments</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-2436"><a href="http://learn.javascript.ru/arguments-named">Именованные аргументы</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-438"><a href="http://learn.javascript.ru/objects-more">Объекты и методы</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-1661"><a href="http://learn.javascript.ru/object-methods">Свои объекты: конструкторы и методы</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-831"><a href="http://learn.javascript.ru/this">Контекст this в деталях</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-833"><a href="http://learn.javascript.ru/decorators">Приём программирования "Декоратор"</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-2432"><a href="http://learn.javascript.ru/types">Получение и проверка типа</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-525"><a href="http://learn.javascript.ru/object-conversion">Преобразование объектов: toString и valueOf</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-782"><a href="http://learn.javascript.ru/type-detection">Оператор typeof, [[Class]] и утиная типизация</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-1573"><a href="http://learn.javascript.ru/additional">Разные темы</a><ul class="menu"><li class="first dhtml-menu collapsed start-collapsed" id="dhtml_menu-2647"><a href="http://learn.javascript.ru/timers">Таймеры</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-767"><a href="http://learn.javascript.ru/settimeout-setinterval">setTimeout и setInterval</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-3271"><a href="http://learn.javascript.ru/settimeout-setinterval-0">Клонировать setTimeout и setInterval</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-2569"><a href="http://learn.javascript.ru/setimmediate">setImmediate</a></li>
+</ul></li>
+<li class="dhtml-menu collapsed start-collapsed" id="dhtml_menu-2648"><a href="http://learn.javascript.ru/binding">Привязка контекста</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-1345"><a href="http://learn.javascript.ru/bind">Привязка функции к объекту и карринг: "bind/bindLate"</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-2450"><a href="http://learn.javascript.ru/bind-late">Позднее связывание "bindLate"</a></li>
+</ul></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-777"><a href="http://learn.javascript.ru/static-properties-and-methods">Статические и фабричные методы объектов</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2433"><a href="http://learn.javascript.ru/array-iteration">Массив: Перебирающие методы</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1274"><a href="http://learn.javascript.ru/eval">Запуск кода из строки: eval </a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-761"><a href="http://learn.javascript.ru/exception">Перехват ошибок, "try..catch"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2426"><a href="http://learn.javascript.ru/json">Формат JSON</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-1421"><a href="http://learn.javascript.ru/javascript-quiz">Тест: повторение тонких мест</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-1277"><a href="http://learn.javascript.ru/css-for-js">CSS для JavaScript-разработчика </a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-1423"><a href="http://learn.javascript.ru/css-why">О чём пойдёт речь</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1427"><a href="http://learn.javascript.ru/css-units">Единицы измерения "px", "em", "%" и другие</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1429"><a href="http://learn.javascript.ru/font-size-line-height">Свойства "font-size" и "line-height"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2083"><a href="http://learn.javascript.ru/white-space">Свойство white-space</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1428"><a href="http://learn.javascript.ru/outline">Свойство "outline"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1424"><a href="http://learn.javascript.ru/box-sizing">Свойство "box-sizing"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1425"><a href="http://learn.javascript.ru/margin">Свойство "margin" </a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1422"><a href="http://learn.javascript.ru/display">Свойство "display"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1418"><a href="http://learn.javascript.ru/space-under-img">Лишнее место под IMG</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1430"><a href="http://learn.javascript.ru/float">Свойство "float"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1437"><a href="http://learn.javascript.ru/overflow">Свойство "overflow"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-677"><a href="http://learn.javascript.ru/position">Свойство "position"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1517"><a href="http://learn.javascript.ru/height-percent">Особенности свойства "height" в %</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2449"><a href="http://learn.javascript.ru/css-selectors">Знаете ли вы селекторы?</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1435"><a href="http://learn.javascript.ru/css-no-ie6">CSS без IE6(7)</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1434"><a href="http://learn.javascript.ru/css-sprite">CSS-спрайты </a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1432"><a href="http://learn.javascript.ru/css-center">Центрирование горизонтальное и вертикальное</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-1600"><a href="http://learn.javascript.ru/css-format">Правила форматирования CSS</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-526"><a href="http://learn.javascript.ru/document">Документ и объекты страницы</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-529"><a href="http://learn.javascript.ru/browser-environment">Окружение: DOM, BOM и JS</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1585"><a href="http://learn.javascript.ru/browser-objects">BOM-объекты: navigator, screen, location, frames</a></li>
+<li class="dhtml-menu collapsed start-collapsed" id="dhtml_menu-628"><a href="http://learn.javascript.ru/dom">DOM-элементы и их свойства</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-657"><a href="http://learn.javascript.ru/dom-nodes">Дерево DOM</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2646"><a href="http://learn.javascript.ru/dom-console">Работа с DOM из консоли</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-659"><a href="http://learn.javascript.ru/traversing-dom">Навигация в DOM, свойства-ссылки</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-660"><a href="http://learn.javascript.ru/basic-dom-node-properties">Свойства узлов: тип, тег, содержимое и другие</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-662"><a href="http://learn.javascript.ru/attributes-and-custom-properties">Атрибуты и "свои" свойства</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1276"><a href="http://learn.javascript.ru/travel">Интерактивное путешествие по DOM</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-663"><a href="http://learn.javascript.ru/searching-elements-dom">Поиск: getElement* и querySelector*</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-665"><a href="http://learn.javascript.ru/modifying-document">Добавление и удаление узлов</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1419"><a href="http://learn.javascript.ru/multi-insert">Мультивставка: insertAdjacentHTML и DocumentFragment</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-721"><a href="http://learn.javascript.ru/document-write">Метод document.write</a></li>
+</ul></li>
+<li class="dhtml-menu collapsed start-collapsed" id="dhtml_menu-678"><a href="http://learn.javascript.ru/view-and-position">Внешний вид: стили, прокрутка, координаты</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-667"><a href="http://learn.javascript.ru/styles-and-classes">Стили и классы, getComputedStyle</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-666"><a href="http://learn.javascript.ru/metrics">Размеры и прокрутка элементов</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1563"><a href="http://learn.javascript.ru/metrics-window">Размеры и прокрутка для страницы</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-804"><a href="http://learn.javascript.ru/coordinates">Координаты</a></li>
+</ul></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2568"><a href="http://learn.javascript.ru/compare-document-position">Проверка вложенности и соседства</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-2636"><a href="http://learn.javascript.ru/dom-cheatsheet">DOM-шпаргалка</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-1347"><a href="http://learn.javascript.ru/events-and-interfaces">События, взаимодействие с посетителем</a><ul class="menu"><li class="first dhtml-menu collapsed start-collapsed" id="dhtml_menu-680"><a href="http://learn.javascript.ru/events">События: основы</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-528"><a href="http://learn.javascript.ru/introduction-browser-events">Введение в браузерные события</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-801"><a href="http://learn.javascript.ru/obtaining-event-object">Получение объекта события</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-802"><a href="http://learn.javascript.ru/bubbling-and-capturing">Всплытие и перехват</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-803"><a href="http://learn.javascript.ru/default-browser-action">Действия браузера по умолчанию</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1581"><a href="http://learn.javascript.ru/unselectable">Отмена выделения, невыделяемые элементы</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-696"><a href="http://learn.javascript.ru/event-delegation">Делегирование событий</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1638"><a href="http://learn.javascript.ru/behavior">Шаблон проектирования "поведение" (behavior)</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-768"><a href="http://learn.javascript.ru/events-and-timing-depth">Управление порядком обработки, setTimeout(...0)</a></li>
+</ul></li>
+<li class="dhtml-menu collapsed start-collapsed" id="dhtml_menu-1577"><a href="http://learn.javascript.ru/mouse-event">События мыши</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-1578"><a href="http://learn.javascript.ru/mouse-clicks">Введение: клики, кнопка, координаты</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1579"><a href="http://learn.javascript.ru/mousemove-events">События движения: "mouseover/out/move/leave/enter"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1582"><a href="http://learn.javascript.ru/mousewheel">Колёсико мыши: "wheel" и аналоги</a></li>
+<li class="last collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-682"><a href="http://learn.javascript.ru/fixevent">Устранение IE-несовместимостей: "fixEvent"</a></li>
+</ul></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1312"><a href="http://learn.javascript.ru/drag-and-drop">Основы Drag'n'Drop </a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1313"><a href="http://learn.javascript.ru/drag-and-drop-objects">Drag'n'Drop объектов</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-697"><a href="http://learn.javascript.ru/keyboard-events">События клавиатуры</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1349"><a href="http://learn.javascript.ru/form-elements">Формы: свойства элементов</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1351"><a href="http://learn.javascript.ru/events-change">Формы: события "change", "input", "propertychange"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1337"><a href="http://learn.javascript.ru/forms-methods">Формы: метод и событие "submit"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-695"><a href="http://learn.javascript.ru/focus-blur">События и методы "focus/blur"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1318"><a href="http://learn.javascript.ru/event-onscroll">Событие "onscroll"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1356"><a href="http://learn.javascript.ru/onload-onerror">События "onload", "onbeforeunload" и "onerror"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-719"><a href="http://learn.javascript.ru/onload-ondomcontentloaded">Событие загрузки документа "onDOMContentLoaded" </a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-2567"><a href="http://learn.javascript.ru/detect-support">Проверка поддержки браузером</a></li>
+</ul></li>
+<li class="expanded active-trail dhtml-menu" id="dhtml_menu-2300"><a href="http://learn.javascript.ru/animation" class="active-trail">Анимация</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-805"><a href="http://learn.javascript.ru/js-animation">JS-Анимация </a></li>
+<li class="leaf active-trail dhtml-menu" id="dhtml_menu-1355"><a href="./Кривые Безье   Учебник JavaScript_files/Кривые Безье   Учебник JavaScript.html" class="active-trail active">Кривые Безье</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-1357"><a href="http://learn.javascript.ru/css-animation">CSS-анимация</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-2565"><a href="http://learn.javascript.ru/jquery-stub">jQuery: курс немолодого бойца [в работе]</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-1640"><a href="http://learn.javascript.ru/jquery-intro">Введение</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1641"><a href="http://learn.javascript.ru/jquery-search">jQuery: поиск элементов</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1642"><a href="http://learn.javascript.ru/jquery-traversal">Навигация по jQuery-коллекции</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2641"><a href="http://learn.javascript.ru/jquery-dom">Методы для работы с DOM [в работе]</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-2566"><a href="http://learn.javascript.ru/jquery-stub-article">... [в работе]</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-766"><a href="http://learn.javascript.ru/widgets">Создание графических компонентов</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-1597"><a href="http://learn.javascript.ru/widgets-intro">Введение</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1591"><a href="http://learn.javascript.ru/widgets-markup">Вёрстка графических компонентов</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1320"><a href="http://learn.javascript.ru/widgets-oop">Процедурное и объектное программирование</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1321"><a href="http://learn.javascript.ru/internal-external-interface">Внутренний и внешний интерфейс</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1593"><a href="http://learn.javascript.ru/widgets-structure">Соглашения в коде виджета</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1575"><a href="http://learn.javascript.ru/custom-events">Свои события, подписка-уведомление</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1335"><a href="http://learn.javascript.ru/widget-tasks">Практика, практика, практика!</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1353"><a href="http://learn.javascript.ru/templates">Шаблонизация в JavaScript</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-1635"><a href="http://learn.javascript.ru/widget-tasks-2">Еще практика! </a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-1333"><a href="http://learn.javascript.ru/inheritance-prototypes">Продвинутая работа с объектами</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-798"><a href="http://learn.javascript.ru/prototype">Прототип: наследование и методы</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-826"><a href="http://learn.javascript.ru/classes">"Классы" в JavaScript</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-825"><a href="http://learn.javascript.ru/constructor">Детали: свойство "constructor"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-824"><a href="http://learn.javascript.ru/instanceof">Проверка прототипа: "instanceof" </a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-813"><a href="http://learn.javascript.ru/class-inheritance">Наследование для классов в JavaScript</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1636"><a href="http://learn.javascript.ru/inheritance-intro">Область применения наследования</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1344"><a href="http://learn.javascript.ru/class-extend">ООП: фреймворк Class.extend </a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1322"><a href="http://learn.javascript.ru/functional-inheritance">ООП: функциональная реализация классов</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1338"><a href="http://learn.javascript.ru/why-prototypes-better">ООП: почему наследование "на прототипах" - лучше</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2639"><a href="http://learn.javascript.ru/native-prototypes">Расширение встроенных прототипов</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-1592"><a href="http://learn.javascript.ru/descriptors-getters-setters">Дескриптор свойства, геттеры и сеттеры</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-1586"><a href="http://learn.javascript.ru/optimize">Оптимизация</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-1515"><a href="http://learn.javascript.ru/memory-management">Управление памятью в JS и DOM</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1576"><a href="http://learn.javascript.ru/memory-leaks">Утечки памяти </a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-774"><a href="http://learn.javascript.ru/script-place-optimize">Оптимизация скриптов: dom, async, defer [в работе]</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-2458"><a href="http://learn.javascript.ru/compress">Сжатие JavaScript</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-2455"><a href="http://learn.javascript.ru/minification">Современные сжиматели JavaScript</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2456"><a href="http://learn.javascript.ru/better-minification">Улучшаем сжатие кода</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2457"><a href="http://learn.javascript.ru/gcc-advanced-optimization">GCC: продвинутые оптимизации</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2459"><a href="http://learn.javascript.ru/gcc-check-types">GCC: статическая проверка типов </a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-2460"><a href="http://learn.javascript.ru/gcc-closure-library">GCC: интеграция с Google Closure Library</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-1340"><a href="http://learn.javascript.ru/extra">Разное</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-1339"><a href="http://learn.javascript.ru/lib">Мини-библиотека функций учебника</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1583"><a href="http://learn.javascript.ru/vydelenie-range-textrange-i-selection">Выделение: Range, TextRange и Selection</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1314"><a href="http://learn.javascript.ru/drag-and-drop-plus">Применяем ООП: Drag'n'Drop++</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-1550"><a href="http://learn.javascript.ru/dataset-api">Свойство dataSet для data-* атрибутов</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2649"><a href="http://learn.javascript.ru/cookie">Куки, document.cookie </a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-2637"><a href="http://learn.javascript.ru/notes">Разные задачи-заметки [в работе]</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-755"><a href="http://learn.javascript.ru/frames-and-windows">Окна и Фреймы</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-757"><a href="http://learn.javascript.ru/window-open">Открытие новых окон</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-760"><a href="http://learn.javascript.ru/window-properties-and-methods">Окно браузера: свойства и методы</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-763"><a href="http://learn.javascript.ru/window-focus">Focus, привлечение внимания к окну</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-756"><a href="http://learn.javascript.ru/iframes">Общение с окном в ифрейме </a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-758"><a href="http://learn.javascript.ru/same-origin-policy">Ограничение "Same Origin"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-759"><a href="http://learn.javascript.ru/cross-window-messaging-with-postmessage">Общение окон с разных доменов: postMessage </a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-764"><a href="http://learn.javascript.ru/clickjacking">Атака Clickjacking и защита от неё</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-785"><a href="http://learn.javascript.ru/regular-expressions-javascript">Регулярные выражения [в работе]</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-789"><a href="http://learn.javascript.ru/regexp-introduction">Введение</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-784"><a href="http://learn.javascript.ru/regexp-character-classes">Символьные классы</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-786"><a href="http://learn.javascript.ru/regexp-special-characters">Специальные символы</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-790"><a href="http://learn.javascript.ru/regexp-flags">Флаги</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-788"><a href="http://learn.javascript.ru/regexp-character-sets-and-ranges">Наборы и диапазоны символов</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-791"><a href="http://learn.javascript.ru/regexp-numeric-quantifiers">Цифровые квантификаторы</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-818"><a href="http://learn.javascript.ru/regexp-quantifiers">Quantifiers +, * and ?</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-792"><a href="http://learn.javascript.ru/regexp-greedy-and-lazy">Greedy and Lazy</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-793"><a href="http://learn.javascript.ru/regexp-ahchors-and-multiline-mode">Ahchors and multiline mode</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-819"><a href="http://learn.javascript.ru/regexp-word-boundary">Word boundary</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-828"><a href="http://learn.javascript.ru/regexp-infinite-backtracking-problem">Infinite backtracking problem</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-795"><a href="http://learn.javascript.ru/regexp-groups">Groups</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-794"><a href="http://learn.javascript.ru/regexp-alternation">Alternation </a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-820"><a href="http://learn.javascript.ru/regexp-methods">Regular expressions methods </a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-827"><a href="http://learn.javascript.ru/regexp-practice">Practice </a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-3273"><a href="http://learn.javascript.ru/regexp-tasks">Задачи-сироты по регекспам</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-2301"><a href="http://learn.javascript.ru/regexp-specials">Особенности регулярных выражений в Javascript</a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-2302"><a href="http://learn.javascript.ru/tools">Сундучок с инструментами</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-2305"><a href="http://learn.javascript.ru/tools-browser-extensions">Полезные расширения Firefox и Chrome</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2452"><a href="http://learn.javascript.ru/ie-visual-studio">Отладка для Internet Explorer (в Visual Studio)</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2454"><a href="http://learn.javascript.ru/fiddler">Скриптуемый отладочный прокси Fiddler</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-2453"><a href="http://learn.javascript.ru/ie-http-analyzer">IE HTTP Analyzer </a></li>
+</ul></li>
+<li class="collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-1474"><a href="http://learn.javascript.ru/hooray">Ура, я знаю JavaScript!</a><ul class="menu"><li class="first last leaf dhtml-menu" id="dhtml_menu-1475"><a href="http://learn.javascript.ru/chto-izuchat-dalshe">Что изучать дальше</a></li>
+</ul></li>
+<li class="last collapsed dhtml-menu collapsed start-collapsed" id="dhtml_menu-2306"><a href="http://learn.javascript.ru/ajax">AJAX</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-2307"><a href="http://learn.javascript.ru/ajax-intro">Введение в AJAX и COMET</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2309"><a href="http://learn.javascript.ru/ajax-nodejs">Node.JS для решения задач</a></li>
+<li class="dhtml-menu collapsed start-collapsed" id="dhtml_menu-2564"><a href="http://learn.javascript.ru/xhr">XMLHttpRequest</a><ul class="menu"><li class="first leaf dhtml-menu" id="dhtml_menu-2308"><a href="http://learn.javascript.ru/ajax-xmlhttprequest">XMLHttpRequest</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2425"><a href="http://learn.javascript.ru/ajax-formats">Форматы данных для AJAX</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2310"><a href="http://learn.javascript.ru/xhr-forms">XMLHttpRequest и POST, отсылка форм</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2427"><a href="http://learn.javascript.ru/xhr-longpoll">XMLHttpRequest: длинные опросы</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2311"><a href="http://learn.javascript.ru/xhr-crossdomain">Кросс-доменный XMLHttpRequest</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2422"><a href="http://learn.javascript.ru/xhr-onprogress">Загрузка c индикацией прогресса</a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-2423"><a href="http://learn.javascript.ru/xhr-resume">Возобновляемая загрузка с XMLHttpRequest</a></li>
+</ul></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2312"><a href="http://learn.javascript.ru/ajax-jsonp">Запрос данных через SCRIPT, формат JSONP</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2367"><a href="http://learn.javascript.ru/ajax-iframe">AJAX-запросы через IFRAME </a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2369"><a href="http://learn.javascript.ru/ajax-iframe-htmlfile">IE: Скрытие IFRAME в ActiveX "htmlfile"</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2368"><a href="http://learn.javascript.ru/ajax-iframe-xdomain">Кросс-доменные запросы через IFRAME</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2424"><a href="http://learn.javascript.ru/comet-iframe">COMET через IFRAME</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2448"><a href="http://learn.javascript.ru/server-sent-events">EventSource - события с сервера</a></li>
+<li class="leaf dhtml-menu" id="dhtml_menu-2370"><a href="http://learn.javascript.ru/websockets">WebSocket </a></li>
+<li class="last leaf dhtml-menu" id="dhtml_menu-2428"><a href="http://learn.javascript.ru/ajax-summary">Таблица транспортов и их возможностей </a></li>
+</ul></li>
+</ul></div>
+</div>
+<div class="block block-open 
+  block-block clearfix" id="block-block-8">
+<a href="http://learn.javascript.ru/bezier#" class="block-title"><div class="title-toggle">»</div>Видео-версия учебника</a>
+<div class="content clearfix"> <ul><li><a style="white-space:nowrap" href="http://learn.javascript.ru/content/video-versiya-pervoy-chasti-uchebnika">Видео по 1й части учебника: 900р (~15$).</a></li>
+</ul> </div>
+</div>
+<div class="block block-open 
+  block-block clearfix" id="block-block-3">
+<a href="http://learn.javascript.ru/bezier#" class="block-title"><div class="title-toggle">»</div>Полезная реклама</a>
+<div class="content clearfix"><div style="text-align:center"><a href="http://www.jetbrains.com/webstorm/?utm_source=javascript.ru&utm_medium=banner2&utm_campaign=webstorm" style="display:block;width:200px;height:200px;background:url(/files/ad/ws_2.png)"></a></div>
+</div>
+</div>
+<div class="block block-open 
+  block-mistype clearfix" id="block-mistype-mistype">
+<a href="http://learn.javascript.ru/bezier#" class="block-title"><div class="title-toggle">»</div>Нашли опечатку?</a>
+<div class="content clearfix">Нашли опечатку на сайте? Что-то кажется странным?
+Выделите соответствующий текст и нажмите Ctrl+Enter!</div>
+</div>
+<div class="block block-open 
+  block-disqus clearfix" id="block-disqus-disqus_recent_comments">
+<a href="http://learn.javascript.ru/bezier#" class="block-title"><div class="title-toggle">»</div>Последние комментарии</a>
+<div class="content clearfix"><div id="dsq-recentcomments" class="dsq-widget"><script type="text/javascript" src="./Кривые Безье   Учебник JavaScript_files/recent_comments_widget.js"></script> <style type="text/css" media="screen">	 .dsq-widget ul.dsq-widget-list {	 padding: 0;	 margin: 0;	 text-align: left;	 }	 img.dsq-widget-avatar {	 width: 32px;	 height: 32px;	 border: 0px;	 margin: 0px;	 padding: 0px 3px 3px 0px;	 float: left;	 }	 a.dsq-widget-user {	 font-weight: bold;	 }	 a.dsq-widget-thread {	 font-weight: bold;	 }	 p.dsq-widget-meta {	 clear: both;	 font-size: 80%;	 padding: 0;	 margin: 0;	 }	 li.dsq-widget-item {	 margin: 15px 0;	 list-style-type: none;	 clear: both;	 }	 span.dsq-widget-clout {	 padding: 0 2px;	 background-color: #ff7300;	 color: #fff;	 }	 table.dsq-widget-horiz td {	 padding-right: 15px;	 }	 .dsq-widget-comment p {	 display: inline;	 }	 </style>	 <ul class="dsq-widget-list">	 <li class="dsq-widget-item">	 <a href="http://disqus.com/by/disqus_4xQMLQeHYH/"><img class="dsq-widget-avatar" src="./Кривые Безье   Учебник JavaScript_files/avatar92.jpg"></a>	 <a class="dsq-widget-user" href="http://disqus.com/by/disqus_4xQMLQeHYH/">SuperDima</a>	 <span class="dsq-widget-comment"><p><code>$(document).on('mousemove.resizeable', onDocumentMouseMove);</code> подскажите пожалуйста, что делает "mousemove.resizeable" класса ведь такого нет .resizeable</p></span>	 <p class="dsq-widget-meta"><a href="http://learn.javascript.ru/widget-tasks">Практика, практика, практика!</a>&nbsp;·&nbsp;<a href="http://learn.javascript.ru/widget-tasks#comment-1863493094">3 minutes ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <img class="dsq-widget-avatar" src="./Кривые Безье   Учебник JavaScript_files/noavatar92.png">	 Guest	 <span class="dsq-widget-comment"><p>при чем здесь мультик? В ie не работает плавное открытие</p></span>	 <p class="dsq-widget-meta"><a href="http://learn.javascript.ru/task/raskryvausheesya-menu">Раскрывающееся меню</a>&nbsp;·&nbsp;<a href="http://learn.javascript.ru/task/raskryvausheesya-menu#comment-1863445446">1 hour ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="http://disqus.com/by/ankitest/"><img class="dsq-widget-avatar" src="./Кривые Безье   Учебник JavaScript_files/avatar92(1).jpg"></a>	 <a class="dsq-widget-user" href="http://disqus.com/by/ankitest/">ankitest</a>	 <span class="dsq-widget-comment"><p>Ты в детстве смотрел мультик "Вовка в тридевятом царстве"? А, неважно. Посмотри: <a href="http://www.youtube.com/watch?v=-DcsMksINWM" rel="nofollow">http://www.youtube.com/watch?v...</a> P. S. В каком браузере не работает? Какая ошибка вылетает?...</p></span>	 <p class="dsq-widget-meta"><a href="http://learn.javascript.ru/task/raskryvausheesya-menu">Раскрывающееся меню</a>&nbsp;·&nbsp;<a href="http://learn.javascript.ru/task/raskryvausheesya-menu#comment-1863412763">1 hour ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <img class="dsq-widget-avatar" src="./Кривые Безье   Учебник JavaScript_files/noavatar92.png">	 Guest	 <span class="dsq-widget-comment"><p>ну почти то что нужно только не кроссбраузерно(</p></span>	 <p class="dsq-widget-meta"><a href="http://learn.javascript.ru/task/raskryvausheesya-menu">Раскрывающееся меню</a>&nbsp;·&nbsp;<a href="http://learn.javascript.ru/task/raskryvausheesya-menu#comment-1863260947">4 hours ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="http://disqus.com/by/ankitest/"><img class="dsq-widget-avatar" src="./Кривые Безье   Учебник JavaScript_files/avatar92(1).jpg"></a>	 <a class="dsq-widget-user" href="http://disqus.com/by/ankitest/">ankitest</a>	 <span class="dsq-widget-comment"><p>Я знаю. Взять и придумать :-) Ищешь готовое решение? Тогда держи: <a href="http://learn.javascript.ru/play/lw55sb" rel="nofollow">http://learn.javascript.ru/pla...</a> Special for you.</p></span>	 <p class="dsq-widget-meta"><a href="http://learn.javascript.ru/task/raskryvausheesya-menu">Раскрывающееся меню</a>&nbsp;·&nbsp;<a href="http://learn.javascript.ru/task/raskryvausheesya-menu#comment-1863157175">6 hours ago</a></p>	 </li>	 </ul></div></div>
+</div>
+<div class="block block-open 
+  block-block clearfix" id="block-block-4">
+<a href="http://learn.javascript.ru/bezier#" class="block-title"><div class="title-toggle">»</div>Поделись!</a>
+<div class="content clearfix">Помоги другим узнать о хорошей статье!
+<div style="height:120px">
+<iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" src="./Кривые Безье   Учебник JavaScript_files/tweet_button.62da0a34306f5c17db7d290755ed1d7d.ru(1).html" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-none" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 98px; height: 28px;"></iframe>
+<script>
+!function(d,s,id){
+  var js,fjs=d.getElementsByTagName(s)[0];
+  if(!d.getElementById(id)){
+    js=d.createElement(s);js.id=id;  
+    js.src="//platform.twitter.com/widgets.js";  
+    fjs.parentNode.insertBefore(js,fjs);
+  }
+}(document,"script","twitter-wjs");
+
+window.___gcfg = {lang: 'ru'};
+
+  (function() {
+    if (document.getElementById('gplus')) return;
+    var po = document.createElement('script'); po.id = 'gplus'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+
+</script>
+<div style="margin-bottom:5px" class="fb-like fb_iframe_widget" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=112959575461438&amp;container_width=246&amp;font=arial&amp;href=http%3A%2F%2Flearn.javascript.ru%2Fbezier&amp;layout=button_count&amp;locale=ru_RU&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=300"><span style="vertical-align: top; width: 0px; height: 0px; overflow: hidden;"><iframe name="f22e3474" width="300px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Кривые Безье   Учебник JavaScript_files/saved_resource.html" style="border: none; visibility: visible; width: 0px; height: 0px;"></iframe></span></div>
+<style>.vk-share-wrapper td{padding:0}</style>
+<div class="vk-share-wrapper">
+<script type="text/javascript" src="./Кривые Безье   Учебник JavaScript_files/share.js" charset="windows-1251"></script>
+<script>
+window.VK && document.write(VK.Share.button({
+  url: "http://learn.javascript.ru/bezier",
+  title: "Кривые Безье",
+  image: "http://learn.javascript.ru/themes/analytic/images/smart.gif",
+  noparse: true}, { type: "round", text: 'Поделиться' }));
+
+</script>
+</div>
+<div style="margin-top:6px">
+<div id="___plusone_1" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 120px; height: 24px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 120px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I1_1424343105245" name="I1_1424343105245" src="./Кривые Безье   Учебник JavaScript_files/fastbutton.html" data-gapiattached="true" title="+1"></iframe></div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+ 
+<script>
+applyBlockCollapse();
+</script>
+</div>
+ 
+ 
+ 
+<div id="footer" class="clearfix">
+<div class="clearfix">
+Обновления — в твиттере: <iframe id="twitter-widget-2" scrolling="no" frameborder="0" allowtransparency="true" src="./Кривые Безье   Учебник JavaScript_files/follow_button.a5bbbb7216610af1306d56b0f28a67d7.ru.html" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 110px; height: 20px;"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<style>.twitter-follow-button{vertical-align:middle;display:inline-block;}</style>
+<div>Текст и код на этом сайте публикуются под открытой лицензией <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.ru">CC BY-NC-SA</a>.<br>
+JavaScript™ – зарегистрированная торговая марка Oracle. Этот сайт не имеет отношения к Oracle.
+</div>
+<p><span>By Ilya Kantor</span> <a href="http://twitter.com/iliakan">Twitter</a> <a href="https://plus.google.com/100781184681750088851?rel=author">G+</a>, 2011-2013. Помогал Алексей Шистеров.</p>
+ 
+<a href="http://www.megastock.ru/" target="_blank"><img src="./Кривые Безье   Учебник JavaScript_files/webmoney.png" alt="www.megastock.ru" border="0"></a>
+<img src="./Кривые Безье   Учебник JavaScript_files/visa.png">
+<img src="./Кривые Безье   Учебник JavaScript_files/mastercard.png">
+ 
+</div>
+</div>
+ 
+<script>
+
+    var _gaq = window._gaq = [];
+    _gaq.push(["_addOrganic", "go.mail.ru","q"]);
+    _gaq.push(["_addOrganic", "nova.rambler.ru","query"]);
+    _gaq.push(["_addOrganic", "nigma.ru", "s"]);
+    _gaq.push(["_addOrganic", "blogs.yandex.ru", "text", true]);
+    _gaq.push(["_addOrganic", "webalta.ru", "q"]);
+    _gaq.push(["_addOrganic", "aport.ru", "r"]);
+    _gaq.push(["_addOrganic", "akavita.by", "z"]);
+    _gaq.push(["_addOrganic", "meta.ua", "q"]);
+    _gaq.push(["_addOrganic", "bigmir.net", "q"]);
+    _gaq.push(["_addOrganic", "tut.by", "query"]);
+    _gaq.push(["_addOrganic", "all.by", "query"]);
+    _gaq.push(["_addOrganic", "i.ua", "q"]);
+    _gaq.push(["_addOrganic", "online.ua", "q"]);
+    _gaq.push(["_addOrganic", "a.ua", "s"]);
+    _gaq.push(["_addOrganic", "ukr.net", "search_query"]);
+    _gaq.push(["_addOrganic", "search.com.ua", "q"]);
+    _gaq.push(["_addOrganic", "search.ua", "query"]);
+    _gaq.push(["_addOrganic", "poisk.ru", "text"]);
+    _gaq.push(["_addOrganic", "km.ru", "sq"]);
+    _gaq.push(["_addOrganic", "liveinternet.ru", "ask"]);
+    _gaq.push(["_addOrganic", "quintura.ru", "request"]);
+    _gaq.push(["_addOrganic", "search.qip.ru","query"]);
+    _gaq.push(["_addOrganic", "gde.ru","keywords"]);
+    _gaq.push(["_addOrganic", "search.ukr.net","search_query"]);
+    _gaq.push(["_addOrganic", "gogo.ru","q"]);
+
+    _gaq.push(['_setAccount', 'UA-2056213-16']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.src = 'http://www.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Кривые Безье   Учебник JavaScript_files/DU1Ia251o0y.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Кривые Безье   Учебник JavaScript_files/saved_resource.html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="f2aa4c0b5" frameborder="0" allowtransparency="true" scrolling="no" src="./Кривые Безье   Учебник JavaScript_files/saved_resource.html" style="display: none;"></iframe></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "http://connect.facebook.net/ru_RU/all.js#xfbml=1&appId=112959575461438";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+ 
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter17649010 = new Ya.Metrika({id:17649010,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript>&lt;div&gt;&lt;img src="//mc.yandex.ru/watch/17649010" style="position:absolute; left:-9999px;" alt=""/&gt;&lt;/div&gt;</noscript>
+ 
+<script async="" src="./Кривые Безье   Учебник JavaScript_files/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+ 
+</div>
+
+
+<iframe name="oauth2relay786980404" id="oauth2relay786980404" src="./Кривые Безье   Учебник JavaScript_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>
